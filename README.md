@@ -1,40 +1,71 @@
-랜딩~
+# sw-kit Landing Page
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+> **sw-kit** — Harness Engineering Agent for Claude Code
+
+sw-kit의 공식 랜딩 페이지입니다. 10명의 AI 에이전트 팀이 협업하는 엔지니어링 워크플로우를 소개합니다.
+
+**Live**: [배포 URL] | **sw-kit 본체**: [github.com/sangwookp9591/sw-kit-claude](https://github.com/sangwookp9591/sw-kit-claude)
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **Tailwind CSS 4**
+- **Geist** (Vercel Typography)
+- **TypeScript 5**
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000 에서 확인할 수 있습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  layout.tsx          # Root layout (Geist fonts, metadata)
+  page.tsx            # 홈페이지 구성
+  globals.css         # Tailwind 테마, 커스텀 애니메이션
 
-## Learn More
+components/
+  Hero.tsx            # 히어로 섹션 + 터미널 애니메이션
+  Terminal.tsx        # 타이핑 애니메이션 컴포넌트
+  AgentTeam.tsx       # 픽셀아트 에이전트 오피스
+  WorkflowPipeline.tsx # 5단계 PDCA 파이프라인
+  Commands.tsx        # CLI 커맨드 & 모드 레퍼런스
+  WhySwkit.tsx        # 가치 제안
+  InnovationsPdca.tsx # PDCA 사이클 설명
+  InstallCta.tsx      # 설치 CTA
+  GitHubStars.tsx     # GitHub 스타 배지
+  Footer.tsx          # 푸터
 
-To learn more about Next.js, take a look at the following resources:
+hooks/
+  useInView.ts        # IntersectionObserver 스크롤 애니메이션
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+lib/
+  config.ts           # 사이트 설정 (버전, GitHub URL)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+public/
+  agents/             # 10명의 에이전트 픽셀아트 SVG
+```
 
-## Deploy on Vercel
+## Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | 개발 서버 실행 |
+| `npm run build` | 프로덕션 빌드 |
+| `npm start` | 프로덕션 서버 실행 |
+| `npm run lint` | ESLint 실행 |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
 
-# sw-kit-landing
+Vercel에 자동 배포됩니다. `main` 브랜치에 push하면 프로덕션 배포가 트리거됩니다.
+
+## License
+
+Apache-2.0
