@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
+  --color-primary: #FF6B2C;
+  --color-bg: #FFFFFF;
+  --color-dark: #2D3436;
+  --color-light-bg: #FFF8F3;
+  --color-text-muted: rgba(45, 52, 54, 0.6);
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2D3436;
 }
 
 @theme inline {
@@ -10,17 +16,59 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-swkit-orange: #FF6B2C;
+  --color-swkit-dark: #2D3436;
+  --color-swkit-light: #FFF8F3;
+  --color-swkit-muted: rgba(45, 52, 54, 0.6);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkle-float {
+  0% { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx, 10px), -20px) scale(0); }
+}
+
+@keyframes ripple-expand {
+  0% { opacity: 0.4; transform: scale(0); }
+  100% { opacity: 0; transform: scale(2.5); }
+}
+
+@keyframes agent-wave {
+  0% { transform: translateY(0) rotate(0deg); }
+  20% { transform: translateY(-6px) rotate(-5deg); }
+  40% { transform: translateY(-4px) rotate(5deg); }
+  60% { transform: translateY(-6px) rotate(-3deg); }
+  80% { transform: translateY(-3px) rotate(2deg); }
+  100% { transform: translateY(-8px) rotate(0deg); }
 }
