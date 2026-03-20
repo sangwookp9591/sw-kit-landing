@@ -4,10 +4,10 @@ import { useState, useCallback } from "react";
 import { useInView } from "@/hooks/useInView";
 import { SITE_CONFIG } from "@/lib/config";
 
-const INSTALL_CODE = `/plugin marketplace add sangwookp9591/sw-kit-claude
-/plugin install sw-kit`;
+const INSTALL_LINE1 = `/plugin marketplace add sangwookp9591/sw-kit-claude`;
+const INSTALL_LINE2 = `/plugin install sw-kit`;
 
-const UPDATE_CODE = `/plugin update sw-kit`;
+const UPDATE_CODE = `claude plugin update sw-kit@swkit-marketplace`;
 
 const TERMINAL_CODE = `claude plugin marketplace add sangwookp9591/sw-kit-claude && claude plugin install sw-kit`;
 
@@ -131,7 +131,8 @@ export default function InstallCta() {
         </p>
 
         <div className="text-left">
-          <CopyBlock code={INSTALL_CODE} label="Claude Code 세션에서" />
+          <CopyBlock code={INSTALL_LINE1} label="Claude Code 세션에서 — 1단계" />
+          <CopyBlock code={INSTALL_LINE2} label="Claude Code 세션에서 — 2단계" />
           <CopyBlock code={TERMINAL_CODE} label="터미널에서 한 줄로" />
           <CopyBlock code={UPDATE_CODE} label="업데이트할 때" />
         </div>
