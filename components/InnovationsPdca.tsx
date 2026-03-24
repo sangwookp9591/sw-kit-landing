@@ -4,11 +4,12 @@ import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
 const innovations = [
-  { id: 0, name: "Context Budget", desc: "토큰 소비를 추적하고 예산 내에서 최적화합니다. 비용 효율적인 AI 사용을 보장합니다.", pdcaStage: "Plan" },
-  { id: 1, name: "Adaptive Routing", desc: "작업 복잡도에 따라 최적의 모델(haiku/sonnet/opus)을 자동으로 선택합니다.", pdcaStage: "Do" },
-  { id: 2, name: "Evidence Chain", desc: "테스트, 빌드, 린트 결과를 체인으로 연결하여 완료를 구조적으로 증명합니다.", pdcaStage: "Check" },
-  { id: 3, name: "Self-Healing", desc: "장애를 자동으로 감지하고 복구합니다. 서킷 브레이커로 반복 실패를 차단합니다.", pdcaStage: "Act" },
-  { id: 4, name: "Cross-Session Learning", desc: "성공 패턴을 캡처하여 다음 세션에 자동으로 적용합니다.", pdcaStage: "Review" },
+  { id: 0, name: "Intent Router", desc: "자연어를 분석하여 auto/plan/team/wizard 중 최적 파이프라인을 자동 선택합니다. 앵커 탐지(파일/함수/에러) + complexity scoring 조합.", pdcaStage: "Plan", isNew: true },
+  { id: 1, name: "Adaptive Routing", desc: "작업 복잡도에 따라 최적의 모델(haiku/sonnet/opus)과 팀 프리셋(Solo/Duo/Squad/Full)을 자동으로 선택합니다.", pdcaStage: "Do" },
+  { id: 2, name: "Evidence Chain", desc: "test/build/lint/diff/design/visual-qa/component-ast 7가지 증거를 체인으로 연결하여 완료를 구조적으로 증명합니다.", pdcaStage: "Check" },
+  { id: 3, name: "Goal-Backward", desc: "완료 ≠ 달성을 구분합니다. ACHIEVED / COMPLETED_NOT_ACHIEVED / INCOMPLETE 3단계 판정으로 목표 달성 여부를 검증합니다.", pdcaStage: "Check", isNew: true },
+  { id: 4, name: "Self-Healing", desc: "장애를 자동으로 감지하고 복구합니다. State GC로 좀비 feature를 자동 정리합니다.", pdcaStage: "Act" },
+  { id: 5, name: "Cross-Session Learning", desc: "성공 패턴을 캡처하여 다음 세션에 자동으로 적용합니다. 디버그 상태도 세션 간 재개 가능.", pdcaStage: "Review" },
 ];
 
 const pdcaStages = ["Plan", "Do", "Check", "Act", "Review"];
@@ -31,7 +32,7 @@ export default function InnovationsPdca() {
         }
       >
         <h2 className="text-3xl font-bold text-swkit-dark text-center mb-12">
-          5 Innovations + PDCA
+          6 Innovations + PDCA
         </h2>
 
         {/* Tab buttons */}
@@ -48,6 +49,7 @@ export default function InnovationsPdca() {
               }`}
             >
               {item.name}
+              {item.isNew && <span className="ml-1.5 text-[10px] bg-red-500 text-white px-1.5 py-0.5 rounded-full">NEW</span>}
             </button>
           ))}
         </div>

@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  version: "1.5.0",
+  version: "2.2.3",
   github: "https://github.com/sangwookp9591/sw-kit-claude",
   githubApi: "https://api.github.com/repos/sangwookp9591/sw-kit-claude",
   title: "sw-kit",

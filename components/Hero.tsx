@@ -5,14 +5,21 @@ import { GitHubStars } from "@/components/GitHubStars";
 import { SITE_CONFIG } from "@/lib/config";
 
 const terminalLines = [
-  "$ /swkit auto my-feature",
+  "$ /swkit do \"로그인 기능 추가해줘\"",
+  "",
+  "━━━ sw-kit 자동 라우팅 ━━━",
+  "분석: complexity 5, 앵커 없음",
+  "라우팅: /swkit team (팀 파이프라인)",
+  "━━━━━━━━━━━━━━━━━━━━━━━",
+  "",
   "[Klay] 코드베이스 분석 중...",
   "[Able] 계획 수립 완료",
-  "[Jay] Backend API 구현...",
-  "[Derek] Frontend 화면 구현...",
-  "[Milla] 보안 리뷰 통과",
-  "[Sam] Evidence Chain: PASS",
-  "Pipeline: Klay > Able > Jay+Derek > Milla > Sam",
+  "[Jay] Backend API 구현 (TDD)",
+  "[Derek] Frontend 화면 구현",
+  "[Milla] 보안 리뷰: PASS",
+  "[Sam] Goal-Backward: ACHIEVED",
+  "",
+  "Pipeline completed!",
 ];
 
 export default function Hero() {

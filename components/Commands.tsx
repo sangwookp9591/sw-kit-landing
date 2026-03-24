@@ -5,41 +5,50 @@ import { useInView } from "@/hooks/useInView";
 import { Terminal } from "@/components/Terminal";
 
 const commands = [
+  { name: "/swkit do <자연어>", desc: "자동 라우팅 — 의도 분석 후 최적 파이프라인 선택", agent: "Intent Router", highlight: true },
+  { name: "/swkit wizard", desc: "자연어로 모든 것을 해결 (GSD 수준 라우팅)", agent: "Iron", highlight: true },
+  { name: "/swkit init <프로젝트>", desc: "질문 기반 문맥 수집 → 프로젝트 문서 생성", agent: "Klay", highlight: true },
+  { name: "/swkit auto <task>", desc: "전체 파이프라인 자동 실행", agent: "Klay > Able > Jay+Derek > Milla > Sam" },
+  { name: "/swkit team [agents] <task>", desc: "plan→exec→verify→fix 품질 루프", agent: "Staged Pipeline" },
+  { name: "/swkit plan <task>", desc: "요구사항 분석 → 작업 분해", agent: "Able + Klay" },
+  { name: "/swkit explore <target>", desc: "코드베이스 탐색 + 구조 분석", agent: "Klay" },
   { name: "/swkit start <name>", desc: "PDCA 사이클 시작", agent: "" },
-  { name: "/swkit auto <f> <task>", desc: "전체 파이프라인 자동 실행", agent: "Klay > Able > Jay+Derek > Milla > Sam" },
-  { name: "/swkit status", desc: "대시보드 (PDCA + TDD + Task + Budget)", agent: "" },
-  { name: "/swkit next", desc: "다음 PDCA 단계 진행", agent: "" },
   { name: "/swkit tdd start", desc: "TDD Red-Green-Refactor", agent: "" },
-  { name: "/swkit explore <target>", desc: "코드베이스 탐색", agent: "Klay" },
-  { name: "/swkit plan <task>", desc: "계획 수립", agent: "Able + Klay" },
-  { name: "/swkit execute <task>", desc: "코드 구현 (TDD)", agent: "Jay + Derek" },
-  { name: "/swkit review", desc: "보안 리뷰", agent: "Milla" },
-  { name: "/swkit verify", desc: "최종 검증 + 증거 체인", agent: "Sam" },
-  { name: "/swkit wizard", desc: "비개발자 마술사 모드", agent: "Iron" },
-  { name: "/swkit rollback", desc: "체크포인트 롤백", agent: "" },
-  { name: "/swkit task create", desc: "Task 체크리스트 생성", agent: "" },
-  { name: "/swkit learn show", desc: "학습 기록 조회", agent: "" },
-  { name: "/swkit help", desc: "도움말", agent: "" },
+  { name: "/swkit execute <task>", desc: "Backend + Frontend 구현 (TDD)", agent: "Jay + Derek" },
+  { name: "/swkit debug <증상>", desc: "과학적 디버깅 — 가설→테스트→결론 (영구 상태)", agent: "Klay + Debugger", highlight: true },
+  { name: "/swkit review", desc: "보안 + 코드 품질 리뷰", agent: "Milla" },
+  { name: "/swkit verify", desc: "증거 체인 + 목표 달성 검증", agent: "Sam" },
+  { name: "/swkit cost", desc: "에이전트별 토큰/비용 추정 보고", agent: "", highlight: true },
+  { name: "/swkit rollback", desc: "Git 체크포인트 롤백", agent: "" },
+  { name: "/swkit agent-ui", desc: "3D Agent Office 브라우저 오픈", agent: "" },
+  { name: "/swkit status", desc: "대시보드 (PDCA + TDD + Task)", agent: "" },
+  { name: "/swkit help", desc: "베스트 프랙티스 가이드 + 도움말", agent: "" },
 ];
 
 const modes = [
-  { name: "auto", desc: "10인 팀 풀 파이프라인 자동 실행", trigger: "/swkit auto" },
-  { name: "tdd", desc: "Red > Green > Refactor 자동 전환", trigger: "/swkit tdd start" },
-  { name: "wizard", desc: "비개발자 가이디드 워크플로우", trigger: "/swkit wizard" },
-  { name: "rollback", desc: "Git 체크포인트 기반 안전 복구", trigger: "/swkit rollback" },
-  { name: "task", desc: "체크리스트 계층 추적 관리", trigger: "/swkit task" },
-  { name: "evidence", desc: "증거 체인 수집 + 완료 판정", trigger: "/swkit verify" },
+  { name: "vibe-coding", desc: "자연어만 입력하면 최적 파이프라인 자동 선택", trigger: "/swkit do" },
+  { name: "auto", desc: "Complexity scoring으로 팀 자동 구성 + 병렬 실행", trigger: "/swkit auto" },
+  { name: "team", desc: "plan→exec→verify→fix 품질 보장 루프 (max 3회 자동 수정)", trigger: "/swkit team" },
+  { name: "wizard", desc: "GSD 수준 자동 라우팅 + 비기술 번역 레이어", trigger: "/swkit wizard" },
+  { name: "debug", desc: "과학적 디버깅 — 가설→테스트→결론, 세션 간 재개", trigger: "/swkit debug" },
+  { name: "tdd", desc: "Red → Green → Refactor 자동 전환", trigger: "/swkit tdd start" },
+  { name: "goal-backward", desc: "완료 ≠ 달성 구분 — ACHIEVED / COMPLETED_NOT_ACHIEVED / INCOMPLETE", trigger: "/swkit verify" },
+  { name: "evidence", desc: "test/build/lint/diff/design/visual-qa 증거 체인", trigger: "/swkit verify" },
 ];
 
 const terminalLines = [
-  "$ /swkit auto user-auth \"JWT auth\"",
+  "$ /swkit do \"인증 기능 추가해줘\"",
+  "",
+  "━━━ sw-kit 자동 라우팅 ━━━",
+  "라우팅: /swkit team (팀 파이프라인)",
+  "━━━━━━━━━━━━━━━━━━━━━━━",
   "",
   "[Klay] 코드베이스 스캔...",
-  "[Able] 계획 수립 + Task 체크리스트 생성",
-  "[Jay] Backend API 구현 (TDD)",
-  "[Derek] Frontend 화면 구현",
+  "[Able] 계획 수립 + Task 생성",
+  "[Jay] Backend API (TDD: 12/12)",
+  "[Derek] Frontend UI 구현",
   "[Milla] 보안 리뷰: PASS",
-  "[Sam] Evidence Chain: PASS",
+  "[Sam] Goal-Backward: ACHIEVED",
   "",
   "Pipeline completed!",
 ];
@@ -97,8 +106,8 @@ export default function Commands() {
             {tab === "commands" && (
               <div className="space-y-2">
                 {commands.map((cmd) => (
-                  <div key={cmd.name} className="flex items-start gap-3 py-1">
-                    <span className="font-mono text-xs font-semibold text-swkit-orange bg-swkit-dark/5 px-2 py-1 rounded whitespace-nowrap">
+                  <div key={cmd.name} className={`flex items-start gap-3 py-1 ${cmd.highlight ? "bg-swkit-orange/5 -mx-2 px-2 rounded-lg" : ""}`}>
+                    <span className={`font-mono text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ${cmd.highlight ? "text-white bg-swkit-orange" : "text-swkit-orange bg-swkit-dark/5"}`}>
                       {cmd.name}
                     </span>
                     <span className="text-sm text-swkit-dark/70 pt-0.5 flex-1">
