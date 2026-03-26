@@ -5,6 +5,7 @@ import WorkflowPipeline from "@/components/WorkflowPipeline";
 import InnovationsPdca from "@/components/InnovationsPdca";
 import Commands from "@/components/Commands";
 import InstallCta from "@/components/InstallCta";
+import NorchDownload from "@/components/NorchDownload";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <InnovationsPdca />
       <Commands />
       <InstallCta />
+      <NorchDownload />
       <Footer />
     </main>
   );
