@@ -50,11 +50,11 @@ function DeskAgent({ agent, index, isInView }: {
       <div className={`absolute -top-12 left-1/2 -translate-x-1/2 z-20 transition-all duration-300 ${
         hovered ? "opacity-100 -translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-90 pointer-events-none"
       }`}>
-        <div className="bg-aing-orange text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-lg relative">
+        <div className="bg-aing-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-lg relative">
           {agent.role} · {agent.model}
           {agent.highlight && " · 비개발자 OK!"}
           {/* Bubble tail */}
-          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-aing-orange rotate-45 rounded-sm" />
+          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-aing-primary rotate-45 rounded-sm" />
         </div>
       </div>
 
@@ -97,7 +97,7 @@ function DeskAgent({ agent, index, isInView }: {
 
       {/* Name tag */}
       <span className={`mt-1.5 text-sm font-extrabold transition-colors duration-200 ${
-        hovered ? "text-aing-orange" : "text-aing-dark"
+        hovered ? "text-aing-primary" : "text-aing-dark"
       }`}>
         {agent.name}
       </span>
@@ -126,8 +126,8 @@ export default function AgentTeam() {
             onClick={() => setTab("team")}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
               tab === "team"
-                ? "bg-aing-orange text-white shadow-md"
-                : "bg-aing-light border border-aing-dark/15 text-aing-dark/70 hover:border-aing-orange/40"
+                ? "bg-aing-primary text-white shadow-md"
+                : "bg-aing-light border border-aing-dark/15 text-aing-dark/70 hover:border-aing-primary/40"
             }`}
           >
             사무실 구경하기
@@ -137,8 +137,8 @@ export default function AgentTeam() {
             onClick={() => setTab("presets")}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
               tab === "presets"
-                ? "bg-aing-orange text-white shadow-md"
-                : "bg-aing-light border border-aing-dark/15 text-aing-dark/70 hover:border-aing-orange/40"
+                ? "bg-aing-primary text-white shadow-md"
+                : "bg-aing-light border border-aing-dark/15 text-aing-dark/70 hover:border-aing-primary/40"
             }`}
           >
             자동 팀 구성
@@ -149,7 +149,7 @@ export default function AgentTeam() {
           <div className="bg-aing-light rounded-2xl p-8 border border-aing-dark/5">
             {/* Office floor label */}
             <div className="text-center mb-6">
-              <span className="inline-block bg-aing-orange/10 text-aing-orange text-xs font-bold px-3 py-1 rounded-full">
+              <span className="inline-block bg-aing-primary/10 text-aing-primary text-xs font-bold px-3 py-1 rounded-full">
                 aing 사무실
               </span>
             </div>
@@ -179,7 +179,7 @@ export default function AgentTeam() {
           <div>
             <p className="text-center text-xs text-aing-dark/40 mb-5">
               복잡도를 분석해서{" "}
-              <span className="text-aing-orange font-semibold">자동으로</span>{" "}
+              <span className="text-aing-primary font-semibold">자동으로</span>{" "}
               딱 맞는 팀을 구성해요
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -194,11 +194,11 @@ export default function AgentTeam() {
                   }
                 >
                   <p className="text-lg font-bold text-aing-dark">{preset.name}</p>
-                  <p className="text-aing-orange font-mono text-sm font-bold mt-1">{preset.cost}</p>
+                  <p className="text-aing-primary font-mono text-sm font-bold mt-1">{preset.cost}</p>
                   <p className="text-[10px] text-aing-dark/40 mt-1">{preset.when}</p>
                   <div className="flex justify-center gap-0.5 mt-2">
                     {Array.from({ length: preset.size }).map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-aing-orange" />
+                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-aing-primary" />
                     ))}
                     {Array.from({ length: 7 - preset.size }).map((_, i) => (
                       <div key={i} className="w-1.5 h-1.5 rounded-full bg-gray-200" />

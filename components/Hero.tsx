@@ -30,7 +30,7 @@ export default function Hero() {
         <div style={{ animation: "fadeInUp 0.8s ease-out" }}>
           <h1 className="text-5xl font-extrabold text-aing-dark md:text-6xl">
             {SITE_CONFIG.title}
-            <span className="ml-3 inline-block rounded-full bg-aing-orange/10 px-2 py-1 text-xs text-aing-orange">
+            <span className="ml-3 inline-block rounded-full bg-aing-primary/10 px-2 py-1 text-xs text-aing-primary">
               v{SITE_CONFIG.version}
             </span>
           </h1>
@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#install"
-              className="rounded-lg bg-aing-orange px-6 py-3 font-semibold text-white transition hover:opacity-90"
+              className="rounded-lg bg-aing-primary px-6 py-3 font-semibold text-white transition hover:opacity-90"
             >
               설치하기
             </a>

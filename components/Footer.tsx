@@ -17,14 +17,14 @@ export default function Footer() {
             <a
               href={SITE_CONFIG.github}
               target="_blank"
-              className="text-sm text-aing-dark/60 hover:text-aing-orange transition block"
+              className="text-sm text-aing-dark/60 hover:text-aing-primary transition block"
             >
               GitHub
             </a>
             <a
               href={SITE_CONFIG.github}
               target="_blank"
-              className="text-sm text-aing-dark/60 hover:text-aing-orange transition block"
+              className="text-sm text-aing-dark/60 hover:text-aing-primary transition block"
             >
               Documentation
             </a>

@@ -95,7 +95,7 @@ export default function WorkflowPipeline() {
           className="text-aing-dark/50 text-center mb-12"
           style={isInView ? { animation: "fadeInUp 0.5s ease-out 0.1s both" } : { opacity: 0 }}
         >
-          <code className="bg-aing-orange/10 px-2 py-1 rounded text-aing-orange font-mono text-sm">
+          <code className="bg-aing-primary/10 px-2 py-1 rounded text-aing-primary font-mono text-sm">
             /aing auto
           </code>{" "}
           한 줄이면 전체 파이프라인이 돌아갑니다
@@ -113,10 +113,10 @@ export default function WorkflowPipeline() {
                   onClick={() => { setIsAutoPlaying(false); setActivePhase(i); }}
                   className={`relative flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-sm font-bold transition-all duration-500 cursor-pointer ${
                     current
-                      ? "bg-aing-orange text-white scale-110 shadow-lg shadow-aing-orange/20"
+                      ? "bg-aing-primary text-white scale-110 shadow-lg shadow-aing-primary/20"
                       : done
-                        ? "bg-aing-orange/10 text-aing-orange"
-                        : "bg-white border border-aing-dark/10 text-aing-dark/40 hover:border-aing-orange/30 hover:text-aing-dark/60"
+                        ? "bg-aing-primary/10 text-aing-primary"
+                        : "bg-white border border-aing-dark/10 text-aing-dark/40 hover:border-aing-primary/30 hover:text-aing-dark/60"
                   }`}
                 >
                   <div className="flex -space-x-1.5">
@@ -143,14 +143,14 @@ export default function WorkflowPipeline() {
                   </div>
                   <span className="hidden sm:inline">{step.label}</span>
                   {done && (
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-aing-orange">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="text-aing-primary">
                       <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1.5" />
                       <polyline points="4 7 6 9.5 10 4.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
                     </svg>
                   )}
                 </button>
                 {i < pipeline.length - 1 && (
-                  <div className={`w-4 sm:w-6 h-0.5 rounded transition-colors duration-500 ${done ? "bg-aing-orange/40" : "bg-aing-dark/10"}`} />
+                  <div className={`w-4 sm:w-6 h-0.5 rounded transition-colors duration-500 ${done ? "bg-aing-primary/40" : "bg-aing-dark/10"}`} />
                 )}
               </div>
             );
@@ -159,19 +159,19 @@ export default function WorkflowPipeline() {
 
         {/* Active phase detail card */}
         <div
-          className="rounded-2xl border border-aing-orange/15 bg-white overflow-hidden shadow-sm transition-all duration-500"
+          className="rounded-2xl border border-aing-primary/15 bg-white overflow-hidden shadow-sm transition-all duration-500"
           key={activePhase}
           style={{ animation: "fadeInUp 0.4s ease-out both" }}
         >
           {/* Phase header */}
-          <div className="bg-aing-orange/5 px-6 py-4 flex items-center justify-between border-b border-aing-orange/10">
+          <div className="bg-aing-primary/5 px-6 py-4 flex items-center justify-between border-b border-aing-primary/10">
             <div className="flex items-center gap-3">
-              <span className="bg-aing-orange text-white w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm">
+              <span className="bg-aing-primary text-white w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm">
                 {active.phase}
               </span>
               <span className="text-aing-dark font-bold text-lg">{active.label}</span>
             </div>
-            <span className="text-aing-orange text-sm font-medium">
+            <span className="text-aing-primary text-sm font-medium">
               {active.agents.length === 1 ? active.agents[0].name : `${active.agents.length}명 투입`}
             </span>
           </div>
@@ -182,7 +182,7 @@ export default function WorkflowPipeline() {
               {active.agents.map((agent, i) => (
                 <div
                   key={agent.name}
-                  className="flex items-center gap-2.5 bg-aing-light border border-aing-dark/5 rounded-xl px-3 py-2 hover:border-aing-orange/30 hover:shadow-sm transition-all"
+                  className="flex items-center gap-2.5 bg-aing-light border border-aing-dark/5 rounded-xl px-3 py-2 hover:border-aing-primary/30 hover:shadow-sm transition-all"
                   style={{ animation: `fadeInUp 0.3s ease-out ${i * 0.06}s both` }}
                 >
                   <img
@@ -206,7 +206,7 @@ export default function WorkflowPipeline() {
 
             {/* Output */}
             <div className="bg-aing-dark rounded-lg px-4 py-3 font-mono text-sm flex items-start gap-2">
-              <span className="text-aing-orange shrink-0">$</span>
+              <span className="text-aing-primary shrink-0">$</span>
               <span className="text-green-400">{active.output}</span>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function WorkflowPipeline() {
           >
             다시 보기
           </button>
-          <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-aing-orange/5 border border-aing-orange/15">
+          <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-aing-primary/5 border border-aing-primary/15">
             <img
               src="/agents/iron.svg"
               alt="Iron"
@@ -229,7 +229,7 @@ export default function WorkflowPipeline() {
               height={20}
               style={{ imageRendering: "pixelated" }}
             />
-            <span className="text-aing-orange text-sm font-medium">
+            <span className="text-aing-primary text-sm font-medium">
               비개발자라면? <code className="font-mono">/aing wizard</code> 로 같은 파이프라인을 쉬운 말로!
             </span>
           </div>

@@ -44,8 +44,8 @@ export default function InnovationsPdca() {
               onClick={() => setActiveTab(item.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                 activeTab === item.id
-                  ? "bg-aing-orange text-white"
-                  : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-orange/50"
+                  ? "bg-aing-primary text-white"
+                  : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-primary/50"
               }`}
             >
               {item.name}
@@ -60,7 +60,7 @@ export default function InnovationsPdca() {
           <p className="text-aing-dark/70 mt-2">{active.desc}</p>
           <p className="mt-3 text-sm">
             연결 PDCA 단계:{" "}
-            <span className="bg-aing-orange text-white px-2 py-0.5 rounded text-xs">
+            <span className="bg-aing-primary text-white px-2 py-0.5 rounded text-xs">
               {active.pdcaStage}
             </span>
           </p>
@@ -73,7 +73,7 @@ export default function InnovationsPdca() {
               <span
                 className={`px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
                   active.pdcaStage === stage
-                    ? "bg-aing-orange text-white scale-110 shadow-lg"
+                    ? "bg-aing-primary text-white scale-110 shadow-lg"
                     : "bg-gray-100 text-aing-dark/50"
                 }`}
               >

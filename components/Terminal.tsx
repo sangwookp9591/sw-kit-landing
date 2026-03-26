@@ -91,7 +91,7 @@ function TerminalLine({ text }: { text: string }) {
   if (text.startsWith("$")) {
     return (
       <>
-        <span className="text-aing-orange">$</span>
+        <span className="text-aing-primary">$</span>
         {text.slice(1)}
       </>
     );

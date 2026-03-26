@@ -49,17 +49,17 @@ export default function WhyAing() {
 
           {/* After Card */}
           <div
-            className="bg-white border-l-4 border-aing-orange rounded-2xl p-8 shadow-lg"
+            className="bg-white border-l-4 border-aing-primary rounded-2xl p-8 shadow-lg"
             style={
               isInView
                 ? { animation: "fadeInRight 0.6s ease-out 0.3s both" }
                 : { opacity: 0 }
             }
           >
-            <h3 className="text-xl font-bold mb-6 text-aing-orange">After</h3>
+            <h3 className="text-xl font-bold mb-6 text-aing-primary">After</h3>
             {afterItems.map((item) => (
               <div key={item} className="flex items-start gap-3 mb-4">
-                <div className="w-6 h-6 rounded-full bg-aing-orange/20 text-aing-orange flex items-center justify-center text-sm font-bold">
+                <div className="w-6 h-6 rounded-full bg-aing-primary/20 text-aing-primary flex items-center justify-center text-sm font-bold">
                   {"\u2713"}
                 </div>
                 <span className="text-aing-dark">{item}</span>

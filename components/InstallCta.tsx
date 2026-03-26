@@ -43,13 +43,13 @@ function CopyBlock({ code, label }: { code: string; label: string }) {
       <button
         type="button"
         onClick={handleCopy}
-        className="group relative w-full overflow-hidden rounded-xl bg-aing-dark p-5 text-left transition-all duration-300 hover:shadow-lg hover:shadow-aing-orange/10 hover:ring-1 hover:ring-aing-orange/20 cursor-pointer"
+        className="group relative w-full overflow-hidden rounded-xl bg-aing-dark p-5 text-left transition-all duration-300 hover:shadow-lg hover:shadow-aing-primary/10 hover:ring-1 hover:ring-aing-primary/20 cursor-pointer"
       >
         {/* Ripple effect */}
         {ripples.map((r) => (
           <span
             key={r.id}
-            className="pointer-events-none absolute rounded-full bg-aing-orange/20"
+            className="pointer-events-none absolute rounded-full bg-aing-primary/20"
             style={{
               left: r.x - 50,
               top: r.y - 50,
@@ -79,8 +79,8 @@ function CopyBlock({ code, label }: { code: string; label: string }) {
               state === "copied"
                 ? "bg-green-500/20 text-green-400 scale-105"
                 : state === "copying"
-                  ? "bg-aing-orange/20 text-aing-orange scale-95"
-                  : "bg-white/10 text-gray-400 group-hover:bg-aing-orange/20 group-hover:text-aing-orange"
+                  ? "bg-aing-primary/20 text-aing-primary scale-95"
+                  : "bg-white/10 text-gray-400 group-hover:bg-aing-primary/20 group-hover:text-aing-primary"
             }`}
           >
             {state === "copied" ? (
@@ -145,7 +145,7 @@ export default function InstallCta() {
           href={SITE_CONFIG.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-8 relative inline-flex items-center gap-2 overflow-hidden bg-aing-orange text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-aing-orange/20"
+          className="group mt-8 relative inline-flex items-center gap-2 overflow-hidden bg-aing-primary text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-aing-primary/20"
         >
           <span>GitHub에서 보기</span>
           <svg viewBox="0 0 16 16" className="h-5 w-5 transition-transform group-hover:translate-x-0.5" fill="currentColor">

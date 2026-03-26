@@ -70,7 +70,7 @@ export default function Commands() {
           Commands & Modes
         </h2>
         <p className="text-aing-dark/60 text-center mb-8">
-          <code className="bg-aing-dark/5 px-2 py-1 rounded text-aing-orange font-mono text-sm">/aing</code>
+          <code className="bg-aing-dark/5 px-2 py-1 rounded text-aing-primary font-mono text-sm">/aing</code>
           {" "}하나로 모든 기능을 사용하세요
         </p>
 
@@ -80,8 +80,8 @@ export default function Commands() {
             onClick={() => setTab("commands")}
             className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
               tab === "commands"
-                ? "bg-aing-orange text-white shadow-md"
-                : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-orange/50"
+                ? "bg-aing-primary text-white shadow-md"
+                : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-primary/50"
             }`}
           >
             Commands
@@ -91,8 +91,8 @@ export default function Commands() {
             onClick={() => setTab("modes")}
             className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
               tab === "modes"
-                ? "bg-aing-orange text-white shadow-md"
-                : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-orange/50"
+                ? "bg-aing-primary text-white shadow-md"
+                : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-primary/50"
             }`}
           >
             Modes & Skills
@@ -110,8 +110,8 @@ export default function Commands() {
             {tab === "commands" && (
               <div className="space-y-2">
                 {commands.map((cmd) => (
-                  <div key={cmd.name} className={`flex items-start gap-3 py-1 ${cmd.highlight ? "bg-aing-orange/5 -mx-2 px-2 rounded-lg" : ""}`}>
-                    <span className={`font-mono text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ${cmd.highlight ? "text-white bg-aing-orange" : "text-aing-orange bg-aing-dark/5"}`}>
+                  <div key={cmd.name} className={`flex items-start gap-3 py-1 ${cmd.highlight ? "bg-aing-primary/5 -mx-2 px-2 rounded-lg" : ""}`}>
+                    <span className={`font-mono text-xs font-semibold px-2 py-1 rounded whitespace-nowrap ${cmd.highlight ? "text-white bg-aing-primary" : "text-aing-primary bg-aing-dark/5"}`}>
                       {cmd.name}
                     </span>
                     <span className="text-sm text-aing-dark/70 pt-0.5 flex-1">
@@ -138,7 +138,7 @@ export default function Commands() {
                       <span className="font-bold text-aing-dark">
                         {mode.name}
                       </span>
-                      <code className="text-xs text-aing-orange bg-aing-orange/10 px-2 py-0.5 rounded font-mono">
+                      <code className="text-xs text-aing-primary bg-aing-primary/10 px-2 py-0.5 rounded font-mono">
                         {mode.trigger}
                       </code>
                     </div>
