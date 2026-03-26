@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "aing - Harness Engineering Agent",
   description: "Harness Engineering Agent for Claude Code",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "aing - Harness Engineering Agent",
     description: "Harness Engineering Agent for Claude Code",
