@@ -50,11 +50,11 @@ function DeskAgent({ agent, index, isInView }: {
       <div className={`absolute -top-12 left-1/2 -translate-x-1/2 z-20 transition-all duration-300 ${
         hovered ? "opacity-100 -translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-90 pointer-events-none"
       }`}>
-        <div className="bg-swkit-orange text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-lg relative">
+        <div className="bg-aing-orange text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-lg relative">
           {agent.role} · {agent.model}
           {agent.highlight && " · 비개발자 OK!"}
           {/* Bubble tail */}
-          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-swkit-orange rotate-45 rounded-sm" />
+          <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-aing-orange rotate-45 rounded-sm" />
         </div>
       </div>
 
@@ -97,11 +97,11 @@ function DeskAgent({ agent, index, isInView }: {
 
       {/* Name tag */}
       <span className={`mt-1.5 text-sm font-extrabold transition-colors duration-200 ${
-        hovered ? "text-swkit-orange" : "text-swkit-dark"
+        hovered ? "text-aing-orange" : "text-aing-dark"
       }`}>
         {agent.name}
       </span>
-      <span className="text-xs font-semibold text-swkit-dark/50">{agent.dept}</span>
+      <span className="text-xs font-semibold text-aing-dark/50">{agent.dept}</span>
     </div>
   );
 }
@@ -113,10 +113,10 @@ export default function AgentTeam() {
   return (
     <section className="bg-white py-20 px-6">
       <div ref={ref} className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-swkit-dark text-center mb-2">
+        <h2 className="text-3xl font-bold text-aing-dark text-center mb-2">
           우리 팀을 소개할게요
         </h2>
-        <p className="text-swkit-dark/50 text-center mb-8 text-sm">
+        <p className="text-aing-dark/50 text-center mb-8 text-sm">
           10명의 전문가가 각자 책상에서 열일하고 있어요
         </p>
 
@@ -126,8 +126,8 @@ export default function AgentTeam() {
             onClick={() => setTab("team")}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
               tab === "team"
-                ? "bg-swkit-orange text-white shadow-md"
-                : "bg-swkit-light border border-swkit-dark/15 text-swkit-dark/70 hover:border-swkit-orange/40"
+                ? "bg-aing-orange text-white shadow-md"
+                : "bg-aing-light border border-aing-dark/15 text-aing-dark/70 hover:border-aing-orange/40"
             }`}
           >
             사무실 구경하기
@@ -137,8 +137,8 @@ export default function AgentTeam() {
             onClick={() => setTab("presets")}
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
               tab === "presets"
-                ? "bg-swkit-orange text-white shadow-md"
-                : "bg-swkit-light border border-swkit-dark/15 text-swkit-dark/70 hover:border-swkit-orange/40"
+                ? "bg-aing-orange text-white shadow-md"
+                : "bg-aing-light border border-aing-dark/15 text-aing-dark/70 hover:border-aing-orange/40"
             }`}
           >
             자동 팀 구성
@@ -146,11 +146,11 @@ export default function AgentTeam() {
         </div>
 
         {tab === "team" && (
-          <div className="bg-swkit-light rounded-2xl p-8 border border-swkit-dark/5">
+          <div className="bg-aing-light rounded-2xl p-8 border border-aing-dark/5">
             {/* Office floor label */}
             <div className="text-center mb-6">
-              <span className="inline-block bg-swkit-orange/10 text-swkit-orange text-xs font-bold px-3 py-1 rounded-full">
-                sw-kit 사무실
+              <span className="inline-block bg-aing-orange/10 text-aing-orange text-xs font-bold px-3 py-1 rounded-full">
+                aing 사무실
               </span>
             </div>
 
@@ -169,7 +169,7 @@ export default function AgentTeam() {
             {/* Office floor decoration */}
             <div className="flex justify-center gap-1 mt-6">
               {Array.from({ length: 20 }).map((_, i) => (
-                <div key={i} className="w-1 h-1 rounded-full bg-swkit-dark/5" />
+                <div key={i} className="w-1 h-1 rounded-full bg-aing-dark/5" />
               ))}
             </div>
           </div>
@@ -177,34 +177,34 @@ export default function AgentTeam() {
 
         {tab === "presets" && (
           <div>
-            <p className="text-center text-xs text-swkit-dark/40 mb-5">
+            <p className="text-center text-xs text-aing-dark/40 mb-5">
               복잡도를 분석해서{" "}
-              <span className="text-swkit-orange font-semibold">자동으로</span>{" "}
+              <span className="text-aing-orange font-semibold">자동으로</span>{" "}
               딱 맞는 팀을 구성해요
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {presets.map((preset, index) => (
                 <div
                   key={preset.name}
-                  className="bg-swkit-light rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
+                  className="bg-aing-light rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
                   style={
                     isInView
                       ? { animation: `fadeInUp 0.3s ease-out ${index * 0.08}s both` }
                       : { opacity: 0 }
                   }
                 >
-                  <p className="text-lg font-bold text-swkit-dark">{preset.name}</p>
-                  <p className="text-swkit-orange font-mono text-sm font-bold mt-1">{preset.cost}</p>
-                  <p className="text-[10px] text-swkit-dark/40 mt-1">{preset.when}</p>
+                  <p className="text-lg font-bold text-aing-dark">{preset.name}</p>
+                  <p className="text-aing-orange font-mono text-sm font-bold mt-1">{preset.cost}</p>
+                  <p className="text-[10px] text-aing-dark/40 mt-1">{preset.when}</p>
                   <div className="flex justify-center gap-0.5 mt-2">
                     {Array.from({ length: preset.size }).map((_, i) => (
-                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-swkit-orange" />
+                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-aing-orange" />
                     ))}
                     {Array.from({ length: 7 - preset.size }).map((_, i) => (
                       <div key={i} className="w-1.5 h-1.5 rounded-full bg-gray-200" />
                     ))}
                   </div>
-                  <p className="text-[9px] text-swkit-dark/30 mt-2">{preset.members}</p>
+                  <p className="text-[9px] text-aing-dark/30 mt-2">{preset.members}</p>
                 </div>
               ))}
             </div>

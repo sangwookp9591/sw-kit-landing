@@ -5,11 +5,11 @@ import { GitHubStars } from "@/components/GitHubStars";
 import { SITE_CONFIG } from "@/lib/config";
 
 const terminalLines = [
-  "$ /swkit do \"로그인 기능 추가해줘\"",
+  "$ /aing do \"로그인 기능 추가해줘\"",
   "",
-  "━━━ sw-kit 자동 라우팅 ━━━",
+  "━━━ aing 자동 라우팅 ━━━",
   "분석: complexity 5, 앵커 없음",
-  "라우팅: /swkit team (팀 파이프라인)",
+  "라우팅: /aing team (팀 파이프라인)",
   "━━━━━━━━━━━━━━━━━━━━━━━",
   "",
   "[Klay] 코드베이스 분석 중...",
@@ -28,14 +28,14 @@ export default function Hero() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 lg:grid-cols-2">
         {/* Left column */}
         <div style={{ animation: "fadeInUp 0.8s ease-out" }}>
-          <h1 className="text-5xl font-extrabold text-swkit-dark md:text-6xl">
+          <h1 className="text-5xl font-extrabold text-aing-dark md:text-6xl">
             {SITE_CONFIG.title}
-            <span className="ml-3 inline-block rounded-full bg-swkit-orange/10 px-2 py-1 text-xs text-swkit-orange">
+            <span className="ml-3 inline-block rounded-full bg-aing-orange/10 px-2 py-1 text-xs text-aing-orange">
               v{SITE_CONFIG.version}
             </span>
           </h1>
 
-          <p className="mt-4 text-xl text-swkit-dark/60 md:text-2xl">
+          <p className="mt-4 text-xl text-aing-dark/60 md:text-2xl">
             개발자에게는 최고의 도우미
             <br />
             비개발자에게는 최고의 마술사
@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#install"
-              className="rounded-lg bg-swkit-orange px-6 py-3 font-semibold text-white transition hover:opacity-90"
+              className="rounded-lg bg-aing-orange px-6 py-3 font-semibold text-white transition hover:opacity-90"
             >
               설치하기
             </a>

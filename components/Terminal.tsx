@@ -53,7 +53,7 @@ export function Terminal({
   const isComplete = lineIndex >= lines.length;
 
   return (
-    <div className="overflow-hidden rounded-lg bg-swkit-dark shadow-lg">
+    <div className="overflow-hidden rounded-lg bg-aing-dark shadow-lg">
       {/* Header bar */}
       <div className="flex items-center gap-2 bg-[#1E2527] px-4 py-3">
         <span className="h-3 w-3 rounded-full bg-[#FF5F56]" />
@@ -91,7 +91,7 @@ function TerminalLine({ text }: { text: string }) {
   if (text.startsWith("$")) {
     return (
       <>
-        <span className="text-swkit-orange">$</span>
+        <span className="text-aing-orange">$</span>
         {text.slice(1)}
       </>
     );

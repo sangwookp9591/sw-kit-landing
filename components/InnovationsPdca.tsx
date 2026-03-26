@@ -31,7 +31,7 @@ export default function InnovationsPdca() {
             : { opacity: 0 }
         }
       >
-        <h2 className="text-3xl font-bold text-swkit-dark text-center mb-12">
+        <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
           6 Innovations + PDCA
         </h2>
 
@@ -44,8 +44,8 @@ export default function InnovationsPdca() {
               onClick={() => setActiveTab(item.id)}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                 activeTab === item.id
-                  ? "bg-swkit-orange text-white"
-                  : "bg-white border border-swkit-dark/20 text-swkit-dark hover:border-swkit-orange/50"
+                  ? "bg-aing-orange text-white"
+                  : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-orange/50"
               }`}
             >
               {item.name}
@@ -56,11 +56,11 @@ export default function InnovationsPdca() {
 
         {/* Tab content */}
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 mb-12 min-h-[100px]">
-          <p className="text-xl font-bold text-swkit-dark">{active.name}</p>
-          <p className="text-swkit-dark/70 mt-2">{active.desc}</p>
+          <p className="text-xl font-bold text-aing-dark">{active.name}</p>
+          <p className="text-aing-dark/70 mt-2">{active.desc}</p>
           <p className="mt-3 text-sm">
             연결 PDCA 단계:{" "}
-            <span className="bg-swkit-orange text-white px-2 py-0.5 rounded text-xs">
+            <span className="bg-aing-orange text-white px-2 py-0.5 rounded text-xs">
               {active.pdcaStage}
             </span>
           </p>
@@ -73,8 +73,8 @@ export default function InnovationsPdca() {
               <span
                 className={`px-5 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
                   active.pdcaStage === stage
-                    ? "bg-swkit-orange text-white scale-110 shadow-lg"
-                    : "bg-gray-100 text-swkit-dark/50"
+                    ? "bg-aing-orange text-white scale-110 shadow-lg"
+                    : "bg-gray-100 text-aing-dark/50"
                 }`}
               >
                 {stage}

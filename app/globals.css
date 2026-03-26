@@ -17,10 +17,10 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-swkit-orange: #FF6B2C;
-  --color-swkit-dark: #2D3436;
-  --color-swkit-light: #FFF8F3;
-  --color-swkit-muted: rgba(45, 52, 54, 0.6);
+  --color-aing-orange: #FF6B2C;
+  --color-aing-dark: #2D3436;
+  --color-aing-light: #FFF8F3;
+  --color-aing-muted: rgba(45, 52, 54, 0.6);
 }
 
 body {

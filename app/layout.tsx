@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "sw-kit - Harness Engineering Agent",
+  title: "aing - Harness Engineering Agent",
   description: "Harness Engineering Agent for Claude Code",
   openGraph: {
-    title: "sw-kit - Harness Engineering Agent",
+    title: "aing - Harness Engineering Agent",
     description: "Harness Engineering Agent for Claude Code",
     images: ["/og-image.png"],
   },

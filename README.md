@@ -1,10 +1,10 @@
-# sw-kit Landing Page
+# aing Landing Page
 
-> **sw-kit** — Harness Engineering Agent for Claude Code
+> **aing** — Harness Engineering Agent for Claude Code
 
-sw-kit의 공식 랜딩 페이지입니다. 10명의 AI 에이전트 팀이 협업하는 엔지니어링 워크플로우를 소개합니다.
+aing의 공식 랜딩 페이지입니다. 10명의 AI 에이전트 팀이 협업하는 엔지니어링 워크플로우를 소개합니다.
 
-**Live**: [배포 URL] | **sw-kit 본체**: [github.com/sangwookp9591/sw-kit-claude](https://github.com/sangwookp9591/sw-kit-claude)
+**Live**: [배포 URL] | **aing 본체**: [github.com/sangwookp9591/ai-ng-kit](https://github.com/sangwookp9591/ai-ng-kit)
 
 ## Tech Stack
 
@@ -37,7 +37,7 @@ components/
   AgentTeam.tsx       # 픽셀아트 에이전트 오피스
   WorkflowPipeline.tsx # 5단계 PDCA 파이프라인
   Commands.tsx        # CLI 커맨드 & 모드 레퍼런스
-  WhySwkit.tsx        # 가치 제안
+  WhyAing.tsx        # 가치 제안
   InnovationsPdca.tsx # PDCA 사이클 설명
   InstallCta.tsx      # 설치 CTA
   GitHubStars.tsx     # GitHub 스타 배지

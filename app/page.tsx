@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import WhySwkit from "@/components/WhySwkit";
+import WhyAing from "@/components/WhyAing";
 import AgentTeam from "@/components/AgentTeam";
 import WorkflowPipeline from "@/components/WorkflowPipeline";
 import InnovationsPdca from "@/components/InnovationsPdca";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <WhySwkit />
+      <WhyAing />
       <AgentTeam />
       <WorkflowPipeline />
       <InnovationsPdca />

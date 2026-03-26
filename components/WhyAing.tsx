@@ -16,20 +16,20 @@ const afterItems = [
   "10명의 전문 에이전트 팀",
 ];
 
-export default function WhySwkit() {
+export default function WhyAing() {
   const { ref, isInView } = useInView();
 
   return (
     <section ref={ref} className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-swkit-dark text-center mb-12">
-          Why sw-kit?
+        <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
+          Why aing?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Before Card */}
           <div
-            className="bg-swkit-dark text-white rounded-2xl p-8"
+            className="bg-aing-dark text-white rounded-2xl p-8"
             style={
               isInView
                 ? { animation: "fadeInLeft 0.6s ease-out both" }
@@ -49,20 +49,20 @@ export default function WhySwkit() {
 
           {/* After Card */}
           <div
-            className="bg-white border-l-4 border-swkit-orange rounded-2xl p-8 shadow-lg"
+            className="bg-white border-l-4 border-aing-orange rounded-2xl p-8 shadow-lg"
             style={
               isInView
                 ? { animation: "fadeInRight 0.6s ease-out 0.3s both" }
                 : { opacity: 0 }
             }
           >
-            <h3 className="text-xl font-bold mb-6 text-swkit-orange">After</h3>
+            <h3 className="text-xl font-bold mb-6 text-aing-orange">After</h3>
             {afterItems.map((item) => (
               <div key={item} className="flex items-start gap-3 mb-4">
-                <div className="w-6 h-6 rounded-full bg-swkit-orange/20 text-swkit-orange flex items-center justify-center text-sm font-bold">
+                <div className="w-6 h-6 rounded-full bg-aing-orange/20 text-aing-orange flex items-center justify-center text-sm font-bold">
                   {"\u2713"}
                 </div>
-                <span className="text-swkit-dark">{item}</span>
+                <span className="text-aing-dark">{item}</span>
               </div>
             ))}
           </div>

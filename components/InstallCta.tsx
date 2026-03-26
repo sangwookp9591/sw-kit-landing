@@ -4,12 +4,12 @@ import { useState, useCallback } from "react";
 import { useInView } from "@/hooks/useInView";
 import { SITE_CONFIG } from "@/lib/config";
 
-const INSTALL_LINE1 = `/plugin marketplace add sangwookp9591/sw-kit-claude`;
-const INSTALL_LINE2 = `/plugin install sw-kit`;
+const INSTALL_LINE1 = `/plugin marketplace add sangwookp9591/ai-ng-kit`;
+const INSTALL_LINE2 = `/plugin install aing`;
 
-const UPDATE_CODE = `claude plugin update sw-kit@swkit-marketplace`;
+const UPDATE_CODE = `claude plugin update aing@aing-marketplace`;
 
-const TERMINAL_CODE = `claude plugin marketplace add sangwookp9591/sw-kit-claude && claude plugin install sw-kit`;
+const TERMINAL_CODE = `claude plugin marketplace add sangwookp9591/ai-ng-kit && claude plugin install aing`;
 
 type CopyState = "idle" | "copying" | "copied";
 
@@ -37,19 +37,19 @@ function CopyBlock({ code, label }: { code: string; label: string }) {
 
   return (
     <div className="mb-4">
-      <p className="text-xs text-swkit-dark/40 mb-2 font-semibold">
+      <p className="text-xs text-aing-dark/40 mb-2 font-semibold">
         {label}
       </p>
       <button
         type="button"
         onClick={handleCopy}
-        className="group relative w-full overflow-hidden rounded-xl bg-swkit-dark p-5 text-left transition-all duration-300 hover:shadow-lg hover:shadow-swkit-orange/10 hover:ring-1 hover:ring-swkit-orange/20 cursor-pointer"
+        className="group relative w-full overflow-hidden rounded-xl bg-aing-dark p-5 text-left transition-all duration-300 hover:shadow-lg hover:shadow-aing-orange/10 hover:ring-1 hover:ring-aing-orange/20 cursor-pointer"
       >
         {/* Ripple effect */}
         {ripples.map((r) => (
           <span
             key={r.id}
-            className="pointer-events-none absolute rounded-full bg-swkit-orange/20"
+            className="pointer-events-none absolute rounded-full bg-aing-orange/20"
             style={{
               left: r.x - 50,
               top: r.y - 50,
@@ -79,8 +79,8 @@ function CopyBlock({ code, label }: { code: string; label: string }) {
               state === "copied"
                 ? "bg-green-500/20 text-green-400 scale-105"
                 : state === "copying"
-                  ? "bg-swkit-orange/20 text-swkit-orange scale-95"
-                  : "bg-white/10 text-gray-400 group-hover:bg-swkit-orange/20 group-hover:text-swkit-orange"
+                  ? "bg-aing-orange/20 text-aing-orange scale-95"
+                  : "bg-white/10 text-gray-400 group-hover:bg-aing-orange/20 group-hover:text-aing-orange"
             }`}
           >
             {state === "copied" ? (
@@ -123,10 +123,10 @@ export default function InstallCta() {
             : { opacity: 0 }
         }
       >
-        <h2 className="text-3xl font-bold text-swkit-dark mb-2">
+        <h2 className="text-3xl font-bold text-aing-dark mb-2">
           30초면 끝나요
         </h2>
-        <p className="text-swkit-dark/50 mb-8 text-sm">
+        <p className="text-aing-dark/50 mb-8 text-sm">
           블록을 클릭하면 바로 복사됩니다
         </p>
 
@@ -137,7 +137,7 @@ export default function InstallCta() {
           <CopyBlock code={UPDATE_CODE} label="업데이트할 때" />
         </div>
 
-        <p className="mt-6 text-xs text-swkit-dark/30">
+        <p className="mt-6 text-xs text-aing-dark/30">
           Claude Code v2.1.69+ · Node.js 18+
         </p>
 
@@ -145,7 +145,7 @@ export default function InstallCta() {
           href={SITE_CONFIG.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-8 relative inline-flex items-center gap-2 overflow-hidden bg-swkit-orange text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-swkit-orange/20"
+          className="group mt-8 relative inline-flex items-center gap-2 overflow-hidden bg-aing-orange text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-aing-orange/20"
         >
           <span>GitHub에서 보기</span>
           <svg viewBox="0 0 16 16" className="h-5 w-5 transition-transform group-hover:translate-x-0.5" fill="currentColor">
