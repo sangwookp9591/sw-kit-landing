@@ -3,7 +3,7 @@
 import { useInView } from "@/hooks/useInView";
 
 const NORCH_VERSION = "0.1.1";
-const DMG_URL = `https://github.com/sangwookp9591/norch/releases/download/v${NORCH_VERSION}/norch-${NORCH_VERSION}.dmg`;
+const DMG_URL = `https://github.com/sangwookp9591/ai-ng-norch/releases/download/v${NORCH_VERSION}/norch-${NORCH_VERSION}.dmg`;
 
 export default function NorchDownload() {
   const { ref, isInView } = useInView();
