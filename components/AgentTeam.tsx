@@ -10,16 +10,18 @@ const team = [
   { name: "Jay", icon: "/agents/jay.svg", role: "API", dept: "백엔드", model: "sonnet", screenColor: "#fb923c" },
   { name: "Jerry", icon: "/agents/jerry.svg", role: "DB", dept: "백엔드", model: "sonnet", screenColor: "#fbbf24" },
   { name: "Milla", icon: "/agents/milla.svg", role: "보안", dept: "백엔드", model: "sonnet", screenColor: "#4ade80" },
+  { name: "Jun", icon: "/agents/jun.svg", role: "성능", dept: "백엔드", model: "sonnet", screenColor: "#f97316" },
   { name: "Willji", icon: "/agents/willji.svg", role: "디자인", dept: "디자인", model: "sonnet", screenColor: "#f9a8d4" },
-  { name: "Derek", icon: "/agents/derek.svg", role: "화면", dept: "프론트", model: "sonnet", screenColor: "#22d3ee" },
+  { name: "Iron", icon: "/agents/iron.svg", role: "화면", dept: "프론트", model: "sonnet", screenColor: "#d946ef" },
   { name: "Rowan", icon: "/agents/rowan.svg", role: "모션", dept: "프론트", model: "sonnet", screenColor: "#a3e635" },
-  { name: "Iron", icon: "/agents/iron.svg", role: "마법사", dept: "마법", model: "sonnet", screenColor: "#d946ef", highlight: true },
+  { name: "Derek", icon: "/agents/derek.svg", role: "모바일", dept: "모바일", model: "sonnet", screenColor: "#22d3ee" },
+  { name: "Simon", icon: "/agents/simon.svg", role: "코드분석", dept: "분석", model: "sonnet", screenColor: "#94a3b8" },
 ];
 
 const presets = [
   { name: "Solo", size: 1, cost: "~15K", when: "간단한 버그 수정", members: "Jay" },
   { name: "Duo", size: 2, cost: "~18K", when: "중간 기능 추가", members: "Jay + Milla" },
-  { name: "Squad", size: 4, cost: "~48K", when: "풀스택 개발", members: "Able + Jay + Derek + Sam" },
+  { name: "Squad", size: 4, cost: "~48K", when: "풀스택 개발", members: "Able + Jay + Iron + Sam" },
   { name: "Full", size: 7, cost: "~123K", when: "아키텍처 변경", members: "7명 총출동" },
 ];
 
@@ -52,7 +54,6 @@ function DeskAgent({ agent, index, isInView }: {
       }`}>
         <div className="bg-aing-primary text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-lg relative">
           {agent.role} · {agent.model}
-          {agent.highlight && " · 비개발자 OK!"}
           {/* Bubble tail */}
           <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-aing-primary rotate-45 rounded-sm" />
         </div>
@@ -117,7 +118,7 @@ export default function AgentTeam() {
           우리 팀을 소개할게요
         </h2>
         <p className="text-aing-dark/50 text-center mb-8 text-sm">
-          10명의 전문가가 각자 책상에서 열일하고 있어요
+          14명의 전문가가 각자 책상에서 열일하고 있어요
         </p>
 
         <div className="flex justify-center gap-3 mb-10">
@@ -155,14 +156,14 @@ export default function AgentTeam() {
             </div>
 
             {/* Office grid - agents at desks */}
-            <div className="grid grid-cols-5 gap-x-2 gap-y-6 max-w-xl mx-auto">
-              {/* Row 1: Sam, Able, Klay, Willji, Iron */}
-              {[team[0], team[1], team[2], team[6], team[9]].map((agent, i) => (
+            <div className="grid grid-cols-6 gap-x-2 gap-y-6 max-w-2xl mx-auto">
+              {/* Row 1: Sam, Able, Klay, Willji, Iron, Rowan */}
+              {[team[0], team[1], team[2], team[7], team[8], team[9]].map((agent, i) => (
                 <DeskAgent key={agent.name} agent={agent} index={i} isInView={isInView} />
               ))}
-              {/* Row 2: Jay, Jerry, Milla, Derek, Rowan */}
-              {[team[3], team[4], team[5], team[7], team[8]].map((agent, i) => (
-                <DeskAgent key={agent.name} agent={agent} index={i + 5} isInView={isInView} />
+              {/* Row 2: Jay, Jerry, Milla, Jun, Derek, Simon */}
+              {[team[3], team[4], team[5], team[6], team[10], team[11]].map((agent, i) => (
+                <DeskAgent key={agent.name} agent={agent} index={i + 6} isInView={isInView} />
               ))}
             </div>
 

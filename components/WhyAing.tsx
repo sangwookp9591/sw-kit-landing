@@ -13,7 +13,7 @@ const afterItems = [
   "자동 학습으로 진화",
   "증거 기반 완료 증명",
   "PDCA로 구조화된 워크플로우",
-  "10명의 전문 에이전트 팀",
+  "14명의 전문 에이전트 팀",
 ];
 
 export default function WhyAing() {

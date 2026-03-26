@@ -15,7 +15,7 @@ const terminalLines = [
   "[Klay] 코드베이스 분석 중...",
   "[Able] 계획 수립 완료",
   "[Jay] Backend API 구현 (TDD)",
-  "[Derek] Frontend 화면 구현",
+  "[Iron] Frontend 화면 구현",
   "[Milla] 보안 리뷰: PASS",
   "[Sam] Goal-Backward: ACHIEVED",
   "",
