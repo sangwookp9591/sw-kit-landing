@@ -4,12 +4,12 @@ import { useState, useCallback } from "react";
 import { useInView } from "@/hooks/useInView";
 import { SITE_CONFIG } from "@/lib/config";
 
-const INSTALL_LINE1 = `/plugin marketplace add sangwookp9591/ai-ng-kit`;
+const INSTALL_LINE1 = `/plugin marketplace add sangwookp9591/ai-ng-kit-claude`;
 const INSTALL_LINE2 = `/plugin install aing`;
 
 const UPDATE_CODE = `claude plugin update aing@aing-marketplace`;
 
-const TERMINAL_CODE = `claude plugin marketplace add sangwookp9591/ai-ng-kit && claude plugin install aing`;
+const TERMINAL_CODE = `claude plugin marketplace add sangwookp9591/ai-ng-kit-claude && claude plugin install aing`;
 
 type CopyState = "idle" | "copying" | "copied";
 
