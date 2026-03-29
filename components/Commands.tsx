@@ -29,6 +29,13 @@ const commands = [
   { name: "/aing agent-ui", desc: "에이전트 활동 모니터 (3D Office)", agent: "" },
   { name: "/aing status", desc: "대시보드 (PDCA + TDD + Task)", agent: "" },
   { name: "/aing help", desc: "베스트 프랙티스 가이드 + 도움말", agent: "" },
+  { name: "/aing review-pipeline", desc: "4-tier 리뷰 파이프라인 (복잡도 기반 자동 선택)", agent: "Klay+Jay+Milla+Able+Sam+Willji+Iron", highlight: true },
+  { name: "/aing review-pipeline eng", desc: "Eng Review (아키텍처, 테스트, 보안)", agent: "Klay + Jay + Milla" },
+  { name: "/aing review-pipeline full", desc: "전체 4-tier + Outside Voice", agent: "All Reviewers" },
+  { name: "/aing ship", desc: "7단계 자동 Ship (merge→test→version→changelog→PR)", agent: "Auto Ship", highlight: true },
+  { name: "/aing freeze <dir>", desc: "디렉토리 편집 제한", agent: "" },
+  { name: "/aing unfreeze", desc: "제한 해제", agent: "" },
+  { name: "/aing retro", desc: "엔지니어링 회고", agent: "" },
 ];
 
 const modes = [
@@ -42,6 +49,8 @@ const modes = [
   { name: "tdd", desc: "Red → Green → Refactor 자동 전환", trigger: "/aing tdd start" },
   { name: "goal-backward", desc: "완료 ≠ 달성 구분 — ACHIEVED / COMPLETED_NOT_ACHIEVED / INCOMPLETE", trigger: "/aing verify" },
   { name: "evidence", desc: "test/build/lint/diff/design/visual-qa 증거 체인", trigger: "/aing verify" },
+  { name: "review-pipeline", desc: "4-tier 구조화 리뷰", trigger: "/aing review-pipeline" },
+  { name: "ship", desc: "자동 배포 파이프라인", trigger: "/aing ship" },
 ];
 
 const terminalLines = [

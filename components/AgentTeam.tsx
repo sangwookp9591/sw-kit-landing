@@ -16,6 +16,8 @@ const team = [
   { name: "Rowan", icon: "/agents/rowan.svg", role: "모션", dept: "프론트", model: "sonnet", screenColor: "#a3e635" },
   { name: "Derek", icon: "/agents/derek.svg", role: "모바일", dept: "모바일", model: "sonnet", screenColor: "#22d3ee" },
   { name: "Simon", icon: "/agents/simon.svg", role: "코드분석", dept: "분석", model: "sonnet", screenColor: "#94a3b8" },
+  { name: "Progress", icon: "/agents/progress.svg", role: "진행도", dept: "분석", model: "haiku", screenColor: "#38bdf8" },
+  { name: "Figma", icon: "/agents/figma.svg", role: "기획추출", dept: "디자인", model: "sonnet", screenColor: "#a855f7" },
 ];
 
 const presets = [
@@ -156,14 +158,14 @@ export default function AgentTeam() {
             </div>
 
             {/* Office grid - agents at desks */}
-            <div className="grid grid-cols-6 gap-x-2 gap-y-6 max-w-2xl mx-auto">
-              {/* Row 1: Sam, Able, Klay, Willji, Iron, Rowan */}
-              {[team[0], team[1], team[2], team[7], team[8], team[9]].map((agent, i) => (
+            <div className="grid grid-cols-7 gap-x-2 gap-y-6 max-w-3xl mx-auto">
+              {/* Row 1: Sam, Able, Klay, Willji, Iron, Rowan, Figma */}
+              {[team[0], team[1], team[2], team[7], team[8], team[9], team[13]].map((agent, i) => (
                 <DeskAgent key={agent.name} agent={agent} index={i} isInView={isInView} />
               ))}
-              {/* Row 2: Jay, Jerry, Milla, Jun, Derek, Simon */}
-              {[team[3], team[4], team[5], team[6], team[10], team[11]].map((agent, i) => (
-                <DeskAgent key={agent.name} agent={agent} index={i + 6} isInView={isInView} />
+              {/* Row 2: Jay, Jerry, Milla, Jun, Derek, Simon, Progress */}
+              {[team[3], team[4], team[5], team[6], team[10], team[11], team[12]].map((agent, i) => (
+                <DeskAgent key={agent.name} agent={agent} index={i + 7} isInView={isInView} />
               ))}
             </div>
 

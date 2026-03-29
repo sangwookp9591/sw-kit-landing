@@ -10,6 +10,10 @@ const innovations = [
   { id: 3, name: "Goal-Backward", desc: "완료 ≠ 달성을 구분합니다. ACHIEVED / COMPLETED_NOT_ACHIEVED / INCOMPLETE 3단계 판정으로 목표 달성 여부를 검증합니다.", pdcaStage: "Check", isNew: true },
   { id: 4, name: "Self-Healing", desc: "장애를 자동으로 감지하고 복구합니다. State GC로 좀비 feature를 자동 정리합니다.", pdcaStage: "Act" },
   { id: 5, name: "Cross-Session Learning", desc: "성공 패턴을 캡처하여 다음 세션에 자동으로 적용합니다. 디버그 상태도 세션 간 재개 가능.", pdcaStage: "Review" },
+  { id: 6, name: "4-Tier Review Pipeline", desc: "CEO/Eng/Design/Outside Voice 구조화 리뷰. 복잡도에 따라 tier를 자동 선택하고, 각 관점에서 독립적으로 리뷰합니다.", pdcaStage: "Check", isNew: true },
+  { id: 7, name: "Ship Workflow", desc: "7단계 자동화 (merge→test→version→changelog→PR). 브랜치 머지부터 PR 생성까지 한 번에 처리합니다.", pdcaStage: "Act", isNew: true },
+  { id: 8, name: "CSO Security Audit", desc: "14-phase OWASP+STRIDE 보안 감사. 인프라, 의존성, CI/CD, 신뢰 경계를 체계적으로 점검합니다.", pdcaStage: "Check", isNew: true },
+  { id: 9, name: "AI Slop Detection", desc: "10가지 안티패턴 + 디자인 스코어링. AI가 생성한 코드의 품질 저하 패턴을 자동 탐지하고 개선합니다.", pdcaStage: "Review", isNew: true },
 ];
 
 const pdcaStages = ["Plan", "Do", "Check", "Act", "Review"];
@@ -32,7 +36,7 @@ export default function InnovationsPdca() {
         }
       >
         <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
-          6 Innovations + PDCA
+          10 Innovations + PDCA
         </h2>
 
         {/* Tab buttons */}

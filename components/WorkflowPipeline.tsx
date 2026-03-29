@@ -41,20 +41,25 @@ const pipeline = [
     phase: 4,
     label: "리뷰",
     agents: [
-      { name: "Milla", icon: "/agents/milla.svg", role: "보안 심사" },
-      { name: "Sam", icon: "/agents/sam.svg", role: "코드 리뷰" },
+      { name: "Klay", icon: "/agents/klay.svg", role: "Eng Review" },
+      { name: "Jay", icon: "/agents/jay.svg", role: "Eng Review" },
+      { name: "Milla", icon: "/agents/milla.svg", role: "Eng Review + CSO" },
+      { name: "Able", icon: "/agents/able.svg", role: "CEO Review" },
+      { name: "Sam", icon: "/agents/sam.svg", role: "CEO Review" },
+      { name: "Willji", icon: "/agents/willji.svg", role: "Design Review" },
+      { name: "Iron", icon: "/agents/iron.svg", role: "Design Review" },
     ],
-    desc: "OWASP Top 10 보안 점검 + Sam이 전체 코드를 꼼꼼히 리뷰해요.",
-    output: "Critical 발견 시 자동 롤백 / Pass 시 다음 단계",
+    desc: "4-tier 구조화 리뷰: Eng(Klay+Jay+Milla) + CEO(Able+Sam) + Design(Willji+Iron) + Outside Voice. CSO 14-phase 보안 감사 포함.",
+    output: "4-tier Review PASS / Critical 발견 시 자동 롤백",
   },
   {
     phase: 5,
-    label: "검증",
+    label: "검증 + Ship",
     agents: [
-      { name: "Sam", icon: "/agents/sam.svg", role: "최종 판정" },
+      { name: "Sam", icon: "/agents/sam.svg", role: "최종 판정 + Ship" },
     ],
-    desc: "증거 없으면 완료 아님! 테스트/빌드/린트 전부 증거로 수집합니다.",
-    output: "[test] PASS  [build] PASS  [lint] PASS  → 완료!",
+    desc: "증거 없으면 완료 아님! 테스트/빌드/린트 전부 증거로 수집. Ship 워크플로우로 merge→test→version→changelog→PR 자동 처리.",
+    output: "[test] PASS  [build] PASS  [lint] PASS  → Ship 완료!",
   },
 ];
 
