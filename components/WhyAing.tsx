@@ -10,10 +10,10 @@ const beforeItems = [
 ];
 
 const afterItems = [
-  "자동 학습으로 진화 (Confidence Decay)",
-  "증거 기반 완료 증명",
-  "PDCA Auto-Scaling 워크플로우",
-  "15명의 전문 에이전트 + 3 AI 합의",
+  "1,712 테스트 통과 (99.7% pass rate)",
+  "증거 기반 완료 증명 (No Evidence, No Done)",
+  "Production Browse Server (1,706 LOC)",
+  "16명의 전문 에이전트 + Teacher 교육 엔진",
 ];
 
 export default function WhyAing() {
@@ -63,6 +63,54 @@ export default function WhyAing() {
                   {"\u2713"}
                 </div>
                 <span className="text-aing-dark">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Comparison Scorecard: ai-ng vs gstack */}
+        <div
+          className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          style={
+            isInView
+              ? { animation: "fadeInUp 0.6s ease-out 0.6s both" }
+              : { opacity: 0 }
+          }
+        >
+          <h3 className="text-xl font-bold text-aing-dark text-center mb-6">
+            ai-ng vs gstack — Scorecard
+          </h3>
+
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <div className="text-center">
+              <p className="text-4xl font-extrabold text-aing-primary">86</p>
+              <p className="text-sm text-aing-dark/60">ai-ng / 110</p>
+            </div>
+            <span className="text-2xl font-bold text-aing-dark/30">vs</span>
+            <div className="text-center">
+              <p className="text-4xl font-extrabold text-aing-dark/40">61</p>
+              <p className="text-sm text-aing-dark/60">gstack / 110</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { label: "Tests", aing: "1,712", gstack: "~100" },
+              { label: "Browse Server", aing: "1,706", gstack: "1,218" },
+              { label: "Eval Suites", aing: "10", gstack: "10" },
+              { label: "Ship Steps", aing: "11", gstack: "prompt" },
+            ].map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-gray-50 rounded-xl p-4 text-center"
+              >
+                <p className="text-xs font-medium text-aing-dark/50 mb-2">
+                  {stat.label}
+                </p>
+                <p className="text-lg font-bold text-aing-primary">
+                  {stat.aing}
+                </p>
+                <p className="text-xs text-aing-dark/40">vs {stat.gstack}</p>
               </div>
             ))}
           </div>

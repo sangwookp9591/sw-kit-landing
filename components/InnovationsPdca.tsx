@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
 const innovations = [
-  { id: 0, name: "Intent Router", desc: "자연어를 분석하여 auto/plan/team/wizard 중 최적 파이프라인을 자동 선택합니다. 앵커 탐지(파일/함수/에러) + complexity scoring 조합.", pdcaStage: "Plan", isNew: true },
+  { id: 0, name: "Intent Router", desc: "자연어를 분석하여 auto/plan/team 중 최적 파이프라인을 자동 선택합니다. 앵커 탐지(파일/함수/에러) + complexity scoring 조합.", pdcaStage: "Plan", isNew: true },
   { id: 1, name: "Adaptive Routing", desc: "작업 복잡도에 따라 최적의 모델(haiku/sonnet/opus)과 팀 프리셋(Solo/Duo/Squad/Full)을 자동으로 선택합니다.", pdcaStage: "Do" },
   { id: 2, name: "Evidence Chain", desc: "test/build/lint/diff/design/visual-qa/component-ast 7가지 증거를 체인으로 연결하여 완료를 구조적으로 증명합니다.", pdcaStage: "Check" },
   { id: 3, name: "Goal-Backward", desc: "완료 ≠ 달성을 구분합니다. ACHIEVED / COMPLETED_NOT_ACHIEVED / INCOMPLETE 3단계 판정으로 목표 달성 여부를 검증합니다.", pdcaStage: "Check", isNew: true },
@@ -18,6 +18,16 @@ const innovations = [
   { id: 11, name: "PDCA Auto-Scaling", desc: "complexity(0-15) 기반 자동 iteration limit + review tier 선택. 작업 복잡도에 따라 PDCA 사이클 깊이가 자동 조절됩니다.", pdcaStage: "Plan", isNew: true },
   { id: 12, name: "Confidence Decay", desc: "관찰 기반 학습 항목은 -1/30일 자연 감쇠, 사용자 명시 항목은 영구 유지. 오래된 패턴은 자동으로 잊고 최신 패턴을 우선합니다.", pdcaStage: "Review", isNew: true },
   { id: 13, name: "Prompt Injection Guard", desc: "7개 regex 패턴 + XML trust boundary wrapping. 프롬프트 인젝션 공격을 자동 탐지하고 차단합니다.", pdcaStage: "Check", isNew: true },
+  { id: 14, name: "Design System Engine", desc: "토큰 생성 → 비교 → 반복 개선 → 진화적 최적화 → 갤러리. CSS/Tailwind 자동 출력.", pdcaStage: "Do", isNew: true },
+  { id: 15, name: "Teacher Agent", desc: "소크라틱 교육 — 답을 주지 않고 질문으로 이끔. 학습자 수준 자동 추적 + 난이도 조절.", pdcaStage: "Review", isNew: true },
+  { id: 16, name: "39 Skills Ecosystem", desc: "investigate, office-hours, retro, benchmark, design-*, careful, freeze, land-and-deploy 등 39개 스킬.", pdcaStage: "Do", isNew: true },
+  { id: 17, name: "60 Browse Commands", desc: "cookie-import-browser, connect-chrome, dialog control, frame, state save/load 등 gstack 45 추월.", pdcaStage: "Check" },
+  { id: 18, name: "Production Browse Server", desc: "1,706 LOC 서버: session 관리, activity pub/sub, bearer token auth, crash auto-restart, graceful shutdown.", pdcaStage: "Do", isNew: true },
+  { id: 19, name: "Eval E2E Infrastructure", desc: "session-runner + eval-store + touchfiles. 10개 스킬별 E2E 테스트(131 pass). git diff 기반 선택적 실행.", pdcaStage: "Check", isNew: true },
+  { id: 20, name: "Ship→Deploy Full Chain", desc: "land-orchestrator: PR check → merge → deploy wait → canary. /aing ship(7) + land(4) = 11 steps.", pdcaStage: "Act", isNew: true },
+  { id: 21, name: "ETHOS 8 Principles", desc: "No Evidence No Done, PDCA는 방향, 에이전트는 역할, 자가 치유, Hook은 눈, Zero Dependencies, 사용자가 결정.", pdcaStage: "Review", isNew: true },
+  { id: 22, name: "AST Grep", desc: "구조적 코드 검색/변환. @ast-grep/napi 기반. TypeScript, JavaScript, TSX, CSS, HTML 지원.", pdcaStage: "Check" },
+  { id: 23, name: "3-Tier Notepad", desc: "Priority(영구)/Working(7일)/Manual(영구). Context compaction 생존. 세션 간 정보 유지.", pdcaStage: "Review" },
 ];
 
 const pdcaStages = ["Plan", "Do", "Check", "Act", "Review"];
@@ -40,7 +50,7 @@ export default function InnovationsPdca() {
         }
       >
         <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
-          14 Innovations + PDCA
+          24 Innovations + PDCA
         </h2>
 
         {/* Tab buttons */}

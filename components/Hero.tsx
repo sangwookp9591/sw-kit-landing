@@ -36,10 +36,21 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 text-xl text-aing-dark/60 md:text-2xl">
-            개발자에게는 최고의 도우미
-            <br />
-            비개발자에게는 최고의 마술사
+            개발자를 위한 최고의 AI 도우미
           </p>
+
+          <p className="mt-3 text-sm font-medium text-aing-dark/50">
+            16 Agents · 39 Skills · 60 Browse Commands · 0 Runtime Dependencies
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            <span className="rounded-full bg-aing-primary/10 px-3 py-1 text-xs font-medium text-aing-primary">
+              Design System Engine
+            </span>
+            <span className="rounded-full bg-aing-primary/10 px-3 py-1 text-xs font-medium text-aing-primary">
+              Teacher Agent
+            </span>
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a

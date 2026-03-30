@@ -17,8 +17,9 @@ const team = [
   { name: "Derek", icon: "/agents/derek.svg", role: "모바일", dept: "모바일", model: "sonnet", screenColor: "#22d3ee" },
   { name: "Simon", icon: "/agents/simon.svg", role: "CEO / 제품 전략", dept: "경영", model: "opus", screenColor: "#94a3b8" },
   { name: "Kain", icon: "/agents/kain.svg", role: "코드분석 / 정적 분석", dept: "백엔드", model: "sonnet", screenColor: "#64748b" },
-  { name: "Progress", icon: "/agents/progress.svg", role: "진행도", dept: "분석", model: "haiku", screenColor: "#38bdf8" },
-  { name: "Figma", icon: "/agents/figma.svg", role: "기획추출", dept: "디자인", model: "sonnet", screenColor: "#a855f7" },
+  { name: "Teacher", icon: "/agents/teacher.svg", role: "Socratic Teaching", dept: "Education", model: "sonnet", screenColor: "#8b5cf6" },
+  { name: "Progress", icon: "/agents/progress.svg", role: "PDCA Progress Monitor", dept: "PDCA", model: "sonnet", screenColor: "#06b6d4" },
+  { name: "Figma", icon: "/agents/figma.svg", role: "Figma Analyst", dept: "Design", model: "sonnet", screenColor: "#f472b6" },
 ];
 
 const presets = [
@@ -121,7 +122,7 @@ export default function AgentTeam() {
           우리 팀을 소개할게요
         </h2>
         <p className="text-aing-dark/50 text-center mb-8 text-sm">
-          15명의 전문가가 각자 책상에서 열일하고 있어요
+          16명의 전문가가 각자 책상에서 열일하고 있어요
         </p>
 
         <div className="flex justify-center gap-3 mb-10">
@@ -160,12 +161,12 @@ export default function AgentTeam() {
 
             {/* Office grid - agents at desks */}
             <div className="grid grid-cols-8 gap-x-2 gap-y-6 max-w-4xl mx-auto">
-              {/* Row 1: Simon, Sam, Able, Klay, Willji, Iron, Rowan, Figma */}
-              {[team[11], team[0], team[1], team[2], team[7], team[8], team[9], team[14]].map((agent, i) => (
+              {/* Row 1: Simon, Sam, Able, Klay, Willji, Iron, Rowan, Teacher */}
+              {[team[11], team[0], team[1], team[2], team[7], team[8], team[9], team[13]].map((agent, i) => (
                 <DeskAgent key={agent.name} agent={agent} index={i} isInView={isInView} />
               ))}
-              {/* Row 2: Jay, Jerry, Milla, Jun, Kain, Derek, Progress + empty */}
-              {[team[3], team[4], team[5], team[6], team[12], team[10], team[13]].map((agent, i) => (
+              {/* Row 2: Jay, Jerry, Milla, Jun, Kain, Derek, Progress, Figma */}
+              {[team[3], team[4], team[5], team[6], team[12], team[10], team[14], team[15]].map((agent, i) => (
                 <DeskAgent key={agent.name} agent={agent} index={i + 8} isInView={isInView} />
               ))}
             </div>

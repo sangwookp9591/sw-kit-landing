@@ -217,7 +217,7 @@ export default function WorkflowPipeline() {
           </div>
         </div>
 
-        {/* Replay + Iron wizard */}
+        {/* Replay */}
         <div className="flex flex-wrap justify-center gap-4 mt-8">
           <button
             type="button"
@@ -226,18 +226,6 @@ export default function WorkflowPipeline() {
           >
             다시 보기
           </button>
-          <div className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-aing-primary/5 border border-aing-primary/15">
-            <img
-              src="/agents/iron.svg"
-              alt="Iron"
-              width={20}
-              height={20}
-              style={{ imageRendering: "pixelated" }}
-            />
-            <span className="text-aing-primary text-sm font-medium">
-              비개발자라면? <code className="font-mono">/aing wizard</code> 로 같은 파이프라인을 쉬운 말로!
-            </span>
-          </div>
         </div>
       </div>
     </section>

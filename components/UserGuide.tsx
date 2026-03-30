@@ -109,19 +109,6 @@ const situations = [
     route: "refactor",
     detail: "Kain(분석) → Jay(실행) → Milla(검증) 3단계 안전 리팩토링",
   },
-  {
-    icon: "/agents/iron.svg",
-    agent: "Iron",
-    title: "개발자가 아닌데",
-    examples: [
-      "쇼핑몰 만들어줘",
-      "블로그 색상 바꿔줘",
-      "회원가입 폼 추가해줘",
-    ],
-    command: "/aing wizard",
-    route: "wizard",
-    detail: "Iron이 자연어를 이해하고 알아서 코드를 만듭니다. 기술 지식 불필요!",
-  },
 ];
 
 const faqs = [
