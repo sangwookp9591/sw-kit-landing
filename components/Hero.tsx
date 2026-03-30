@@ -48,6 +48,12 @@ export default function Hero() {
             >
               설치하기
             </a>
+            <a
+              href="#guide"
+              className="rounded-lg border border-aing-primary/30 px-6 py-3 font-semibold text-aing-primary transition hover:bg-aing-primary/5"
+            >
+              사용 가이드
+            </a>
             <GitHubStars />
           </div>
         </div>

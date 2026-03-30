@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import WhyAing from "@/components/WhyAing";
 import AgentTeam from "@/components/AgentTeam";
+import UserGuide from "@/components/UserGuide";
 import WorkflowPipeline from "@/components/WorkflowPipeline";
 import InnovationsPdca from "@/components/InnovationsPdca";
 import Commands from "@/components/Commands";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <WhyAing />
       <AgentTeam />
+      <UserGuide />
       <WorkflowPipeline />
       <InnovationsPdca />
       <Commands />
