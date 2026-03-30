@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  version: "2.8.3",
+  version: "2.8.4",
   github: "https://github.com/sangwookp9591/ai-ng-kit-claude",
   githubApi: "https://api.github.com/repos/sangwookp9591/ai-ng-kit-claude",
   title: "aing",
