@@ -34,7 +34,7 @@ const pipeline = [
       { name: "Derek", icon: "/agents/derek.svg", role: "프론트엔드" },
       { name: "Rowan", icon: "/agents/rowan.svg", role: "인터랙션" },
     ],
-    desc: "6명이 동시에 달려요! PDCA 사이클(Plan→Do→Check→Act) + TDD(빨강-초록-파랑) 필수 적용이라 안전하게~",
+    desc: "6명이 동시에 달려요! PDCA Auto-Scaling(complexity 0-15 기반 자동 iteration) + TDD(빨강-초록-파랑) 필수 적용이라 안전하게~",
     output: "서브태스크마다 PDCA + TDD + 체크리스트 자동 체크",
   },
   {
@@ -49,7 +49,7 @@ const pipeline = [
       { name: "Willji", icon: "/agents/willji.svg", role: "Design Review" },
       { name: "Iron", icon: "/agents/iron.svg", role: "Design Review" },
     ],
-    desc: "4-tier 구조화 리뷰: Eng(Klay+Jay+Milla) + CEO(Able+Sam) + Design(Willji+Iron) + Outside Voice. CSO 14-phase 보안 감사 포함.",
+    desc: "4-tier 구조화 리뷰: Eng(Klay+Jay+Milla) + CEO(Able+Sam) + Design(Willji+Iron) + Outside Voice. Multi-AI Consensus(Claude+Codex+Gemini 3-voice 투표) + CSO 14-phase 보안 감사 포함.",
     output: "4-tier Review PASS / Critical 발견 시 자동 롤백",
   },
   {

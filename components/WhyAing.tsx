@@ -10,10 +10,10 @@ const beforeItems = [
 ];
 
 const afterItems = [
-  "자동 학습으로 진화",
+  "자동 학습으로 진화 (Confidence Decay)",
   "증거 기반 완료 증명",
-  "PDCA로 구조화된 워크플로우",
-  "14명의 전문 에이전트 팀",
+  "PDCA Auto-Scaling 워크플로우",
+  "15명의 전문 에이전트 + 3 AI 합의",
 ];
 
 export default function WhyAing() {

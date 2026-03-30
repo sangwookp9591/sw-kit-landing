@@ -36,6 +36,8 @@ const commands = [
   { name: "/aing freeze <dir>", desc: "디렉토리 편집 제한", agent: "" },
   { name: "/aing unfreeze", desc: "제한 해제", agent: "" },
   { name: "/aing retro", desc: "엔지니어링 회고", agent: "" },
+  { name: "aing-learn", desc: "JSONL 학습 데이터 관리 (추가/검색/감쇠 확인)", agent: "CLI", highlight: true },
+  { name: "aing-bench", desc: "벤치마크 실행 (LLM judge 7 criteria + eval store)", agent: "CLI", highlight: true },
 ];
 
 const modes = [
@@ -51,11 +53,13 @@ const modes = [
   { name: "evidence", desc: "test/build/lint/diff/design/visual-qa 증거 체인", trigger: "/aing verify" },
   { name: "review-pipeline", desc: "4-tier 구조화 리뷰", trigger: "/aing review-pipeline" },
   { name: "ship", desc: "자동 배포 파이프라인", trigger: "/aing ship" },
+  { name: "consensus", desc: "Multi-AI 3-voice 투표 (Claude + Codex + Gemini)", trigger: "/aing consensus" },
+  { name: "pdca-auto", desc: "complexity(0-15) 기반 자동 PDCA 스케일링", trigger: "/aing auto" },
 ];
 
 const usagePatterns = [
   { id: "A", name: "Quick Task", command: "/aing do \"task\"", desc: "자동 라우팅", detail: "의도를 분석해 최적 파이프라인을 자동 선택합니다" },
-  { id: "B", name: "Full Pipeline", command: "/aing auto feat \"task\"", desc: "14명 에이전트 전체 파이프라인", detail: "탐색→기획→구현→리뷰→검증 전 과정을 자동 실행합니다" },
+  { id: "B", name: "Full Pipeline", command: "/aing auto feat \"task\"", desc: "15명 에이전트 전체 파이프라인", detail: "탐색→기획→구현→리뷰→검증 전 과정을 자동 실행합니다" },
   { id: "C", name: "Review Only", command: "/aing review-pipeline", desc: "4-tier 리뷰", detail: "Eng + CEO + Design + Outside Voice 구조화 리뷰만 실행합니다" },
   { id: "D", name: "Custom Team", command: "/aing team agents \"task\"", desc: "팀 직접 구성", detail: "원하는 에이전트를 직접 선택해 팀을 구성합니다" },
   { id: "E", name: "Wizard", command: "/aing wizard", desc: "비개발자 모드", detail: "기술 용어 없이 자연어만으로 모든 기능을 사용합니다" },

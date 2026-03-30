@@ -13,7 +13,11 @@ const innovations = [
   { id: 6, name: "4-Tier Review Pipeline", desc: "CEO/Eng/Design/Outside Voice 구조화 리뷰. 복잡도에 따라 tier를 자동 선택하고, 각 관점에서 독립적으로 리뷰합니다.", pdcaStage: "Check", isNew: true },
   { id: 7, name: "Ship Workflow", desc: "7단계 자동화 (merge→test→version→changelog→PR). 브랜치 머지부터 PR 생성까지 한 번에 처리합니다.", pdcaStage: "Act", isNew: true },
   { id: 8, name: "CSO Security Audit", desc: "14-phase OWASP+STRIDE 보안 감사. 인프라, 의존성, CI/CD, 신뢰 경계를 체계적으로 점검합니다.", pdcaStage: "Check", isNew: true },
-  { id: 9, name: "AI Slop Detection", desc: "10가지 안티패턴 + 디자인 스코어링. AI가 생성한 코드의 품질 저하 패턴을 자동 탐지하고 개선합니다.", pdcaStage: "Review", isNew: true },
+  { id: 9, name: "AI Slop Detection", desc: "10가지 안티패턴 + 디자인 스코어링. AI가 생성한 코드의 품질 저하 패턴을 자동 탐지하고 개선합니다.", pdcaStage: "Review" },
+  { id: 10, name: "Multi-AI Consensus", desc: "Claude + Codex + Gemini 3-voice 투표 엔진. cli-bridge factory로 다중 AI 관점을 통합하여 더 정확한 판단을 내립니다.", pdcaStage: "Check", isNew: true },
+  { id: 11, name: "PDCA Auto-Scaling", desc: "complexity(0-15) 기반 자동 iteration limit + review tier 선택. 작업 복잡도에 따라 PDCA 사이클 깊이가 자동 조절됩니다.", pdcaStage: "Plan", isNew: true },
+  { id: 12, name: "Confidence Decay", desc: "관찰 기반 학습 항목은 -1/30일 자연 감쇠, 사용자 명시 항목은 영구 유지. 오래된 패턴은 자동으로 잊고 최신 패턴을 우선합니다.", pdcaStage: "Review", isNew: true },
+  { id: 13, name: "Prompt Injection Guard", desc: "7개 regex 패턴 + XML trust boundary wrapping. 프롬프트 인젝션 공격을 자동 탐지하고 차단합니다.", pdcaStage: "Check", isNew: true },
 ];
 
 const pdcaStages = ["Plan", "Do", "Check", "Act", "Review"];
@@ -36,7 +40,7 @@ export default function InnovationsPdca() {
         }
       >
         <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
-          10 Innovations + PDCA
+          14 Innovations + PDCA
         </h2>
 
         {/* Tab buttons */}
