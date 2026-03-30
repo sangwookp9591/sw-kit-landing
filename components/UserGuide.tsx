@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
 const situations = [
   {
-    emoji: "🔨",
+    icon: "/agents/jay.svg",
+    agent: "Jay",
     title: "뭔가 만들고 싶을 때",
     examples: [
       "로그인 기능 추가해줘",
@@ -17,7 +19,8 @@ const situations = [
     detail: "aing이 복잡도를 분석해서 적절한 에이전트 팀을 자동 배정합니다",
   },
   {
-    emoji: "🐛",
+    icon: "/agents/klay.svg",
+    agent: "Klay",
     title: "버그를 고치고 싶을 때",
     examples: [
       "로그인하면 500 에러가 나",
@@ -29,7 +32,8 @@ const situations = [
     detail: "4단계 체계적 디버깅: 증상 수집 → 가설 → 검증 → 수정",
   },
   {
-    emoji: "👀",
+    icon: "/agents/milla.svg",
+    agent: "Milla",
     title: "코드를 리뷰받고 싶을 때",
     examples: [
       "내가 짠 코드 좀 봐줘",
@@ -41,7 +45,8 @@ const situations = [
     detail: "4-tier 리뷰: Eng(보안/품질) + CEO(전략) + Design(UI/UX) + Outside Voice",
   },
   {
-    emoji: "🔍",
+    icon: "/agents/klay.svg",
+    agent: "Klay",
     title: "코드를 이해하고 싶을 때",
     examples: [
       "이 프로젝트 구조 설명해줘",
@@ -53,7 +58,8 @@ const situations = [
     detail: "Klay이 코드베이스를 스캔하고 아키텍처를 분석합니다",
   },
   {
-    emoji: "⚡",
+    icon: "/agents/jun.svg",
+    agent: "Jun",
     title: "성능이 느릴 때",
     examples: [
       "왜 이렇게 느리지?",
@@ -65,7 +71,8 @@ const situations = [
     detail: "Jun이 런타임/번들/쿼리를 프로파일링하고 병목을 찾습니다",
   },
   {
-    emoji: "🧪",
+    icon: "/agents/jay.svg",
+    agent: "Jay",
     title: "테스트를 작성하고 싶을 때",
     examples: [
       "이 기능 테스트 짜줘",
@@ -77,7 +84,8 @@ const situations = [
     detail: "TDD 사이클: RED(테스트 작성) → GREEN(코드 작성) → REFACTOR(개선)",
   },
   {
-    emoji: "🚀",
+    icon: "/agents/sam.svg",
+    agent: "Sam",
     title: "배포하고 싶을 때",
     examples: [
       "이거 PR 만들어줘",
@@ -89,7 +97,8 @@ const situations = [
     detail: "7단계 자동: merge → test → review → version → changelog → PR",
   },
   {
-    emoji: "🧹",
+    icon: "/agents/kain.svg",
+    agent: "Kain",
     title: "코드를 정리하고 싶을 때",
     examples: [
       "이 코드 리팩토링해줘",
@@ -98,10 +107,11 @@ const situations = [
     ],
     command: '/aing do "리팩토링해줘"',
     route: "refactor",
-    detail: "Klay(영향 분석) → Jay(실행) → Milla(검증) 3단계 안전 리팩토링",
+    detail: "Kain(분석) → Jay(실행) → Milla(검증) 3단계 안전 리팩토링",
   },
   {
-    emoji: "🔮",
+    icon: "/agents/iron.svg",
+    agent: "Iron",
     title: "개발자가 아닌데",
     examples: [
       "쇼핑몰 만들어줘",
@@ -182,8 +192,9 @@ export default function UserGuide() {
               }`}
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl">{s.emoji}</span>
+                <Image src={s.icon} alt={s.agent} width={28} height={28} className="rounded" />
                 <span className="font-bold text-aing-dark">{s.title}</span>
+                <span className="text-[10px] text-aing-dark/30 ml-auto">{s.agent}</span>
               </div>
 
               <div className="space-y-1.5 mb-3">
