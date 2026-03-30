@@ -53,6 +53,22 @@ const modes = [
   { name: "ship", desc: "자동 배포 파이프라인", trigger: "/aing ship" },
 ];
 
+const usagePatterns = [
+  { id: "A", name: "Quick Task", command: "/aing do \"task\"", desc: "자동 라우팅", detail: "의도를 분석해 최적 파이프라인을 자동 선택합니다" },
+  { id: "B", name: "Full Pipeline", command: "/aing auto feat \"task\"", desc: "14명 에이전트 전체 파이프라인", detail: "탐색→기획→구현→리뷰→검증 전 과정을 자동 실행합니다" },
+  { id: "C", name: "Review Only", command: "/aing review-pipeline", desc: "4-tier 리뷰", detail: "Eng + CEO + Design + Outside Voice 구조화 리뷰만 실행합니다" },
+  { id: "D", name: "Custom Team", command: "/aing team agents \"task\"", desc: "팀 직접 구성", detail: "원하는 에이전트를 직접 선택해 팀을 구성합니다" },
+  { id: "E", name: "Wizard", command: "/aing wizard", desc: "비개발자 모드", detail: "기술 용어 없이 자연어만으로 모든 기능을 사용합니다" },
+];
+
+const devFlow = [
+  { step: 1, label: "Plan", desc: "다중 관점 계획 수립" },
+  { step: 2, label: "Build", desc: "PDCA 사이클 기반 구현" },
+  { step: 3, label: "Review", desc: "4-tier 구조화 리뷰" },
+  { step: 4, label: "Ship", desc: "7-step 자동 배포" },
+  { step: 5, label: "Retro", desc: "엔지니어링 회고" },
+];
+
 const terminalLines = [
   "$ /aing do \"인증 기능 추가해줘\"",
   "",
@@ -70,11 +86,11 @@ const terminalLines = [
   "Pipeline completed!",
 ];
 
-type Tab = "commands" | "modes";
+type Tab = "patterns" | "commands" | "modes";
 
 export default function Commands() {
   const { ref, isInView } = useInView();
-  const [tab, setTab] = useState<Tab>("commands");
+  const [tab, setTab] = useState<Tab>("patterns");
 
   return (
     <section className="bg-aing-light py-20 px-6">
@@ -88,6 +104,17 @@ export default function Commands() {
         </p>
 
         <div className="flex justify-center gap-3 mb-10">
+          <button
+            type="button"
+            onClick={() => setTab("patterns")}
+            className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
+              tab === "patterns"
+                ? "bg-aing-primary text-white shadow-md"
+                : "bg-white border border-aing-dark/20 text-aing-dark hover:border-aing-primary/50"
+            }`}
+          >
+            Usage Patterns
+          </button>
           <button
             type="button"
             onClick={() => setTab("commands")}
@@ -120,6 +147,51 @@ export default function Commands() {
                 : { opacity: 0 }
             }
           >
+            {tab === "patterns" && (
+              <div className="space-y-3">
+                {/* Usage Patterns */}
+                {usagePatterns.map((p) => (
+                  <div
+                    key={p.id}
+                    className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="bg-aing-primary text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold text-xs">
+                        {p.id}
+                      </span>
+                      <span className="font-bold text-aing-dark">{p.name}</span>
+                      <span className="text-xs text-aing-dark/40 ml-auto">{p.desc}</span>
+                    </div>
+                    <code className="block text-xs text-aing-primary bg-aing-primary/10 px-3 py-1.5 rounded font-mono mb-2">
+                      {p.command}
+                    </code>
+                    <p className="text-sm text-aing-dark/60">{p.detail}</p>
+                  </div>
+                ))}
+
+                {/* Dev Flow */}
+                <div className="mt-6 pt-4 border-t border-aing-dark/10">
+                  <p className="text-sm font-semibold text-aing-dark mb-3">Development Flow</p>
+                  <div className="flex items-center justify-between gap-1">
+                    {devFlow.map((f, i) => (
+                      <div key={f.step} className="flex items-center gap-1 flex-1">
+                        <div className="flex flex-col items-center text-center flex-1">
+                          <span className="bg-aing-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs mb-1">
+                            {f.step}
+                          </span>
+                          <span className="text-xs font-bold text-aing-dark">{f.label}</span>
+                          <span className="text-[10px] text-aing-dark/40">{f.desc}</span>
+                        </div>
+                        {i < devFlow.length - 1 && (
+                          <div className="w-4 h-0.5 bg-aing-primary/30 rounded shrink-0 mt-[-12px]" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
             {tab === "commands" && (
               <div className="space-y-2">
                 {commands.map((cmd) => (

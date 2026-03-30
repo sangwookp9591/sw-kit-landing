@@ -34,8 +34,8 @@ const pipeline = [
       { name: "Derek", icon: "/agents/derek.svg", role: "프론트엔드" },
       { name: "Rowan", icon: "/agents/rowan.svg", role: "인터랙션" },
     ],
-    desc: "6명이 동시에 달려요! TDD(빨강-초록-파랑) 필수 적용이라 안전하게~",
-    output: "서브태스크마다 TDD + 체크리스트 자동 체크",
+    desc: "6명이 동시에 달려요! PDCA 사이클(Plan→Do→Check→Act) + TDD(빨강-초록-파랑) 필수 적용이라 안전하게~",
+    output: "서브태스크마다 PDCA + TDD + 체크리스트 자동 체크",
   },
   {
     phase: 4,
@@ -58,8 +58,8 @@ const pipeline = [
     agents: [
       { name: "Sam", icon: "/agents/sam.svg", role: "최종 판정 + Ship" },
     ],
-    desc: "증거 없으면 완료 아님! 테스트/빌드/린트 전부 증거로 수집. Ship 워크플로우로 merge→test→version→changelog→PR 자동 처리.",
-    output: "[test] PASS  [build] PASS  [lint] PASS  → Ship 완료!",
+    desc: "증거 없으면 완료 아님! 테스트/빌드/린트 전부 증거로 수집. 7-step Ship 워크플로우(merge→test→version→changelog→tag→PR→deploy) 자동 처리 + 엔지니어링 회고(Retro).",
+    output: "[test] PASS  [build] PASS  [lint] PASS  → Ship 완료! → Retro 기록",
   },
 ];
 
