@@ -44,6 +44,12 @@ const commands = [
   { name: "aing-learn", desc: "JSONL 학습 데이터 관리 (추가/검색/감쇠 확인)", agent: "CLI", highlight: true },
   { name: "aing-bench", desc: "벤치마크 실행 (LLM judge 7 criteria + eval store)", agent: "CLI", highlight: true },
   { name: "/aing teacher", desc: "소크라틱 교육 모드 (질문으로 학습 유도)", agent: "Teacher", highlight: "NEW" },
+  { name: "/aing harness <task>", desc: "하네스 자동 설계 — 도메인 분석→패턴 추천→에이전트 정의→스킬 생성", agent: "Harness Architect", highlight: "NEW" },
+  { name: "/aing harness check", desc: "생성된 하네스 구조/연결/품질 자동 검증", agent: "Validator" },
+  { name: "/aing harness find <kw>", desc: "패턴 갤러리 검색 + 추천", agent: "Gallery" },
+  { name: "/aing harness sim", desc: "데이터 흐름 시뮬레이션 (드라이런)", agent: "Simulator" },
+  { name: "/aing harness chain", desc: "멀티 하네스 파이프라인 조합", agent: "Composer" },
+  { name: "/aing harness fix", desc: "런타임 진단 — 멈춘 에이전트/단절 흐름 탐지", agent: "Debugger" },
 ];
 
 const modes = [
@@ -60,6 +66,7 @@ const modes = [
   { name: "consensus", desc: "Multi-AI 3-voice 투표 (Claude + Codex + Gemini)", trigger: "/aing consensus" },
   { name: "pdca-auto", desc: "complexity(0-15) 기반 자동 PDCA 스케일링", trigger: "/aing auto" },
   { name: "teacher", desc: "소크라틱 교육 모드 — 질문으로 학습 유도, 답을 직접 주지 않음", trigger: "/aing teacher" },
+  { name: "harness", desc: "메타 스킬 — 에이전트 팀 설계 + 스킬 생성 + 오케스트레이션. 7개 서브기능 (auto-design, check, find, sim, log, chain, fix)", trigger: "/aing harness" },
 ];
 
 const usagePatterns = [
@@ -67,6 +74,7 @@ const usagePatterns = [
   { id: "B", name: "Full Pipeline", command: "/aing auto feat \"task\"", desc: "13명 에이전트 전체 파이프라인", detail: "탐색→기획→구현→리뷰→검증 전 과정을 자동 실행합니다" },
   { id: "C", name: "Review Only", command: "/aing review-pipeline", desc: "4-tier 리뷰", detail: "Eng + CEO + Design + Outside Voice 구조화 리뷰만 실행합니다" },
   { id: "D", name: "Custom Team", command: "/aing team agents \"task\"", desc: "팀 직접 구성", detail: "원하는 에이전트를 직접 선택해 팀을 구성합니다" },
+  { id: "E", name: "Harness Design", command: "/aing harness \"리서치 팀 구성\"", desc: "하네스 자동 설계", detail: "도메인에 맞는 에이전트 팀 + 스킬 + 오케스트레이터를 자동 생성합니다" },
 ];
 
 const devFlow = [

@@ -20,7 +20,7 @@ const innovations = [
   { id: 13, name: "Prompt Injection Guard", desc: "7개 regex 패턴 + XML trust boundary wrapping. 프롬프트 인젝션 공격을 자동 탐지하고 차단합니다.", pdcaStage: "Check", isNew: true },
   { id: 14, name: "Design System Engine", desc: "토큰 생성 → 비교 → 반복 개선 → 진화적 최적화 → 갤러리. CSS/Tailwind 자동 출력.", pdcaStage: "Do", isNew: true },
   { id: 15, name: "Teacher Agent", desc: "소크라틱 교육 — 답을 주지 않고 질문으로 이끔. 학습자 수준 자동 추적 + 난이도 조절.", pdcaStage: "Review", isNew: true },
-  { id: 16, name: "39 Skills Ecosystem", desc: "investigate, office-hours, retro, benchmark, design-*, careful, freeze, land-and-deploy 등 39개 스킬.", pdcaStage: "Do", isNew: true },
+  { id: 16, name: "40 Skills Ecosystem", desc: "investigate, office-hours, retro, benchmark, design-*, careful, freeze, land-and-deploy, harness 등 40개 스킬.", pdcaStage: "Do", isNew: true },
   { id: 17, name: "60 Browse Commands", desc: "cookie-import-browser, connect-chrome, dialog control, frame, state save/load 등 gstack 45 추월.", pdcaStage: "Check" },
   { id: 18, name: "Production Browse Server", desc: "1,706 LOC 서버: session 관리, activity pub/sub, bearer token auth, crash auto-restart, graceful shutdown.", pdcaStage: "Do", isNew: true },
   { id: 19, name: "Eval E2E Infrastructure", desc: "session-runner + eval-store + touchfiles. 10개 스킬별 E2E 테스트(131 pass). git diff 기반 선택적 실행.", pdcaStage: "Check", isNew: true },
@@ -28,6 +28,7 @@ const innovations = [
   { id: 21, name: "ETHOS 8 Principles", desc: "No Evidence No Done, PDCA는 방향, 에이전트는 역할, 자가 치유, Hook은 눈, Zero Dependencies, 사용자가 결정.", pdcaStage: "Review", isNew: true },
   { id: 22, name: "AST Grep", desc: "구조적 코드 검색/변환. @ast-grep/napi 기반. TypeScript, JavaScript, TSX, CSS, HTML 지원.", pdcaStage: "Check" },
   { id: 23, name: "3-Tier Notepad", desc: "Priority(영구)/Working(7일)/Manual(영구). Context compaction 생존. 세션 간 정보 유지.", pdcaStage: "Review" },
+  { id: 24, name: "Harness Architect", desc: "7-feature 메타 스킬: 자동 설계(adaptive) + 검증(check) + 패턴 갤러리(find) + 시뮬레이션(sim) + 버전 이력(log) + 멀티 하네스 조합(chain) + 런타임 진단(fix). 9 TS 모듈, 2,523 LOC.", pdcaStage: "Plan", isNew: true },
 ];
 
 const pdcaStages = ["Plan", "Do", "Check", "Act", "Review"];
@@ -50,7 +51,7 @@ export default function InnovationsPdca() {
         }
       >
         <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
-          24 Innovations + PDCA
+          25 Innovations + PDCA
         </h2>
 
         {/* Tab buttons */}

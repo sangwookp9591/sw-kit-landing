@@ -13,7 +13,7 @@ const afterItems = [
   "1,712 테스트 통과 (99.7% pass rate)",
   "증거 기반 완료 증명 (No Evidence, No Done)",
   "Production Browse Server (1,706 LOC)",
-  "16명의 전문 에이전트 + Teacher 교육 엔진",
+  "16명의 전문 에이전트 + Harness Architect 메타 스킬",
 ];
 
 export default function WhyAing() {
