@@ -72,9 +72,18 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right column */}
-        <div style={{ animation: "fadeInUp 0.8s ease-out 0.3s both" }}>
-          <Terminal lines={terminalLines} loop={true} />
+        {/* Right column — mascot + terminal */}
+        <div className="relative" style={{ animation: "fadeInUp 0.8s ease-out 0.3s both" }}>
+          {/* Mascot behind terminal */}
+          <img
+            src="/ai-ing.png"
+            alt="aing mascot"
+            className="absolute -top-16 -right-4 z-0 w-40 md:w-52 drop-shadow-lg pointer-events-none select-none"
+            style={{ opacity: 0.95 }}
+          />
+          <div className="relative z-10">
+            <Terminal lines={terminalLines} loop={true} />
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface TerminalProps {
   lines: string[];
@@ -51,6 +51,17 @@ export function Terminal({
   }, [active, lineIndex, charIndex, lines, loop, typingSpeed]);
 
   const isComplete = lineIndex >= lines.length;
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom as lines appear, scroll back to top on loop reset
+  useEffect(() => {
+    if (!bodyRef.current) return;
+    if (lineIndex === 0 && charIndex === 0) {
+      bodyRef.current.scrollTop = 0;
+    } else {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
+  }, [lineIndex, charIndex]);
 
   return (
     <div className="overflow-hidden rounded-lg bg-aing-dark shadow-lg">
@@ -62,7 +73,7 @@ export function Terminal({
       </div>
 
       {/* Body */}
-      <div className="p-4 font-mono text-sm text-gray-300">
+      <div ref={bodyRef} className="h-80 overflow-y-auto p-4 font-mono text-sm text-gray-300">
         {lines.map((line, i) => {
           if (i > lineIndex) return null;
 
