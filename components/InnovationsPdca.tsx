@@ -21,7 +21,7 @@ const innovations = [
   { id: 14, name: "Design System Engine", desc: "토큰 생성 → 비교 → 반복 개선 → 진화적 최적화 → 갤러리. CSS/Tailwind 자동 출력.", pdcaStage: "Do", isNew: true },
   { id: 15, name: "Teacher Agent", desc: "소크라틱 교육 — 답을 주지 않고 질문으로 이끔. 학습자 수준 자동 추적 + 난이도 조절.", pdcaStage: "Review", isNew: true },
   { id: 16, name: "40 Skills Ecosystem", desc: "investigate, office-hours, retro, benchmark, design-*, careful, freeze, land-and-deploy, harness 등 40개 스킬.", pdcaStage: "Do", isNew: true },
-  { id: 17, name: "60 Browse Commands", desc: "cookie-import-browser, connect-chrome, dialog control, frame, state save/load 등 gstack 45 추월.", pdcaStage: "Check" },
+  { id: 17, name: "60 Browse Commands", desc: "cookie-import-browser, connect-chrome, dialog control, frame, state save/load 등 60개 브라우저 명령어.", pdcaStage: "Check" },
   { id: 18, name: "Production Browse Server", desc: "1,706 LOC 서버: session 관리, activity pub/sub, bearer token auth, crash auto-restart, graceful shutdown.", pdcaStage: "Do", isNew: true },
   { id: 19, name: "Eval E2E Infrastructure", desc: "session-runner + eval-store + touchfiles. 10개 스킬별 E2E 테스트(131 pass). git diff 기반 선택적 실행.", pdcaStage: "Check", isNew: true },
   { id: 20, name: "Ship→Deploy Full Chain", desc: "land-orchestrator: PR check → merge → deploy wait → canary. /aing ship(7) + land(4) = 11 steps.", pdcaStage: "Act", isNew: true },

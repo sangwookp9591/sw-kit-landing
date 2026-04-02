@@ -68,7 +68,7 @@ export default function WhyAing() {
           </div>
         </div>
 
-        {/* Comparison Scorecard: ai-ng vs gstack */}
+        {/* Key Metrics */}
         <div
           className="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
           style={
@@ -78,27 +78,15 @@ export default function WhyAing() {
           }
         >
           <h3 className="text-xl font-bold text-aing-dark text-center mb-6">
-            ai-ng vs gstack — Scorecard
+            Key Metrics
           </h3>
-
-          <div className="flex items-center justify-center gap-6 mb-8">
-            <div className="text-center">
-              <p className="text-4xl font-extrabold text-aing-primary">86</p>
-              <p className="text-sm text-aing-dark/60">ai-ng / 110</p>
-            </div>
-            <span className="text-2xl font-bold text-aing-dark/30">vs</span>
-            <div className="text-center">
-              <p className="text-4xl font-extrabold text-aing-dark/40">61</p>
-              <p className="text-sm text-aing-dark/60">gstack / 110</p>
-            </div>
-          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: "Tests", aing: "1,712", gstack: "~100" },
-              { label: "Browse Server", aing: "1,706", gstack: "1,218" },
-              { label: "Eval Suites", aing: "10", gstack: "10" },
-              { label: "Ship Steps", aing: "11", gstack: "prompt" },
+              { label: "Tests", value: "1,712" },
+              { label: "Browse Server", value: "1,706 LOC" },
+              { label: "Eval Suites", value: "10" },
+              { label: "Ship Steps", value: "11" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -108,9 +96,8 @@ export default function WhyAing() {
                   {stat.label}
                 </p>
                 <p className="text-lg font-bold text-aing-primary">
-                  {stat.aing}
+                  {stat.value}
                 </p>
-                <p className="text-xs text-aing-dark/40">vs {stat.gstack}</p>
               </div>
             ))}
           </div>
