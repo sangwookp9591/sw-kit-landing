@@ -12,8 +12,8 @@ const beforeItems = [
 const afterItems = [
   "1,712 테스트 통과 (99.7% pass rate)",
   "증거 기반 완료 증명 (No Evidence, No Done)",
-  "Production Browse Server (1,706 LOC)",
-  "16명의 전문 에이전트 + Harness Architect 메타 스킬",
+  "42개 전문 스킬 + Harness Architect 메타 스킬",
+  "21명의 전문 에이전트 팀 자동 구성",
 ];
 
 export default function WhyAing() {
@@ -84,8 +84,8 @@ export default function WhyAing() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { label: "Tests", value: "1,712" },
-              { label: "Browse Server", value: "1,706 LOC" },
-              { label: "Eval Suites", value: "10" },
+              { label: "Agents", value: "21" },
+              { label: "Skills", value: "42" },
               { label: "Ship Steps", value: "11" },
             ].map((stat) => (
               <div

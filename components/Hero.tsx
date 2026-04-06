@@ -40,7 +40,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-3 text-sm font-medium text-aing-dark/50">
-            16 Agents · 40 Skills · 60 Browse Commands · 0 Runtime Dependencies
+            21 Agents · 42 Skills · 0 Runtime Dependencies
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2">
@@ -48,7 +48,7 @@ export default function Hero() {
               Harness Architect
             </span>
             <span className="rounded-full bg-aing-primary/10 px-3 py-1 text-xs font-medium text-aing-primary">
-              Design System Engine
+              AING-DR 합의 프로세스
             </span>
             <span className="rounded-full bg-aing-primary/10 px-3 py-1 text-xs font-medium text-aing-primary">
               Teacher Agent

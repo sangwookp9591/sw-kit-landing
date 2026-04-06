@@ -31,10 +31,11 @@ const pipeline = [
       { name: "Jerry", icon: "/agents/jerry.svg", role: "DB + 인프라" },
       { name: "Milla", icon: "/agents/milla.svg", role: "인증 + 보안" },
       { name: "Willji", icon: "/agents/willji.svg", role: "UI/UX 디자인" },
-      { name: "Derek", icon: "/agents/derek.svg", role: "프론트엔드" },
+      { name: "Iron", icon: "/agents/iron.svg", role: "프론트엔드" },
+      { name: "Derek", icon: "/agents/derek.svg", role: "모바일" },
       { name: "Rowan", icon: "/agents/rowan.svg", role: "인터랙션" },
     ],
-    desc: "6명이 동시에 달려요! PDCA Auto-Scaling(complexity 0-15 기반 자동 iteration) + TDD(빨강-초록-파랑) 필수 적용이라 안전하게~",
+    desc: "7명이 동시에 달려요! PDCA Auto-Scaling(complexity 0-15 기반 자동 iteration) + TDD(빨강-초록-파랑) 필수 적용이라 안전하게~",
     output: "서브태스크마다 PDCA + TDD + 체크리스트 자동 체크",
   },
   {
@@ -49,7 +50,7 @@ const pipeline = [
       { name: "Willji", icon: "/agents/willji.svg", role: "Design Review" },
       { name: "Iron", icon: "/agents/iron.svg", role: "Design Review" },
     ],
-    desc: "4-tier 구조화 리뷰: Eng(Klay+Jay+Milla) + CEO(Able+Sam) + Design(Willji+Iron) + Outside Voice. Multi-AI Consensus(Claude+Codex+Gemini 3-voice 투표) + CSO 14-phase 보안 감사 포함.",
+    desc: "4-tier 구조화 리뷰: Eng(Klay+Jay+Milla) + CEO(Able+Sam) + Design(Willji+Iron) + Outside Voice. CSO 14-phase 보안 감사 포함.",
     output: "4-tier Review PASS / Critical 발견 시 자동 롤백",
   },
   {
