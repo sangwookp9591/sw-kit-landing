@@ -13,12 +13,22 @@ const innovations = [
   { id: 6, name: "CSO Security Audit", desc: "14-phase OWASP+STRIDE 보안 감사. 인프라, 의존성, CI/CD, 신뢰 경계를 체계적으로 점검합니다.", pdcaStage: "Check", isNew: true },
   { id: 7, name: "AI Pipeline", desc: "AI 모델 탐색→벤치마크 비교→코드 생성→API 스캐폴딩→테스트까지 자동 파이프라인. Hugg(리서치) + Jo(구현) 협업.", pdcaStage: "Do", isNew: true },
   { id: 8, name: "PDCA Auto-Scaling", desc: "complexity(0-15) 기반 자동 iteration limit + review tier 선택. 작업 복잡도에 따라 PDCA 사이클 깊이가 자동 조절됩니다.", pdcaStage: "Plan", isNew: true },
-  { id: 9, name: "AING-DR 합의 프로세스", desc: "Ryan(원칙 도출) → Able(설계) → Klay(반론) → Noa(검증) → Critic(비평). 다중 관점 합의 기반 의사결정.", pdcaStage: "Plan", isNew: true },
+  { id: 9, name: "AING-DR 합의 프로세스", desc: "Ryan(원칙 도출) → Able(설계) → Klay(반론) → Noah(검증) → Critic(비평). 다중 관점 합의 기반 의사결정.", pdcaStage: "Plan", isNew: true },
   { id: 10, name: "Design System Engine", desc: "토큰 생성 → 비교 → 반복 개선 → 진화적 최적화 → 갤러리. CSS/Tailwind 자동 출력.", pdcaStage: "Do", isNew: true },
   { id: 11, name: "Teacher Agent", desc: "소크라틱 교육 — 답을 주지 않고 질문으로 이끔. 학습자 수준 자동 추적 + 난이도 조절.", pdcaStage: "Review", isNew: true },
   { id: 12, name: "Ship→Deploy Full Chain", desc: "land-orchestrator: PR check → merge → deploy wait → canary. /aing ship(7) + land(4) = 11 steps.", pdcaStage: "Act", isNew: true },
   { id: 13, name: "Progress Check", desc: "기획 문서 vs 코드베이스 구현 진행도를 비교 분석. 진행률%, 미구현 항목을 자동 리포트합니다.", pdcaStage: "Check" },
   { id: 14, name: "Harness Architect", desc: "메타 스킬: 자동 설계 + 검증 + 패턴 갤러리 + 시뮬레이션 + 멀티 하네스 조합 + 런타임 진단.", pdcaStage: "Plan", isNew: true },
+  { id: 15, name: "Context Budget", desc: "훅 단위 토큰 소비 추적. 예산 초과 시 자동 경고 + 모델 다운그레이드.", pdcaStage: "Plan" },
+  { id: 16, name: "Cross-Session Learning", desc: "세션 간 패턴 재사용. 30일 confidence decay로 오래된 학습 자동 퇴화.", pdcaStage: "Act" },
+  { id: 17, name: "AI Slop Detection", desc: "10가지 안티패턴 + 7개 리트머스 테스트로 AI 생성 코드의 품질 저하를 자동 감지.", pdcaStage: "Check" },
+  { id: 18, name: "Prompt Injection Guard", desc: "7가지 패턴 + XML trust boundary로 프롬프트 인젝션 공격 차단.", pdcaStage: "Check" },
+  { id: 19, name: "Autoplan Engine", desc: "6원칙 기반 자동 의사결정. 복잡도/앵커/히스토리 조합으로 최적 실행 경로 선택.", pdcaStage: "Plan" },
+  { id: 20, name: "AST Grep", desc: "@ast-grep/napi 기반 구조적 코드 검색/치환. 정규식이 아닌 AST 레벨 정확도.", pdcaStage: "Do" },
+  { id: 21, name: "3-Tier Notepad", desc: "Priority/Working/Manual 3단계 메모. 컴팩션에서도 살아남는 영속 메모리.", pdcaStage: "Plan" },
+  { id: 22, name: "Team Heartbeat", desc: "워커 헬스 모니터링 + phase gate 검증. 멈춘 에이전트 자동 감지.", pdcaStage: "Check" },
+  { id: 23, name: "Learner Hook", desc: "재사용 가능한 명령/파일/에러 수정 패턴을 자동 감지하여 학습 DB에 저장.", pdcaStage: "Act" },
+  { id: 24, name: "Persistent Mode", desc: "세션 복구 기반 Don't-stop 실행. 컨텍스트 리셋에서도 작업 상태 유지.", pdcaStage: "Do" },
 ];
 
 const pdcaStages = ["Plan", "Do", "Check", "Act", "Review"];
@@ -41,7 +51,7 @@ export default function InnovationsPdca() {
         }
       >
         <h2 className="text-3xl font-bold text-aing-dark text-center mb-12">
-          15 Innovations + PDCA
+          25 Innovations + PDCA
         </h2>
 
         {/* Tab buttons */}

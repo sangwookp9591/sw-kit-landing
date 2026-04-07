@@ -6,21 +6,21 @@ import { useInView } from "@/hooks/useInView";
 const team = [
   { name: "Sam", icon: "/agents/sam.svg", role: "CTO", dept: "CTO", model: "opus", screenColor: "#a78bfa" },
   { name: "Simon", icon: "/agents/simon.svg", role: "CEO / 제품 전략", dept: "경영", model: "opus", screenColor: "#94a3b8" },
-  { name: "Able", icon: "/agents/able.svg", role: "기획", dept: "기획", model: "sonnet", screenColor: "#60a5fa" },
+  { name: "Able", icon: "/agents/able.svg", role: "기획", dept: "기획", model: "opus", screenColor: "#60a5fa" },
   { name: "Klay", icon: "/agents/klay.svg", role: "설계", dept: "기획", model: "opus", screenColor: "#5eead4" },
-  { name: "Ryan", icon: "/agents/ryan.svg", role: "원칙 도출", dept: "기획", model: "sonnet", screenColor: "#84cc16" },
-  { name: "Jay", icon: "/agents/jay.svg", role: "API", dept: "백엔드", model: "sonnet", screenColor: "#fb923c" },
-  { name: "Jerry", icon: "/agents/jerry.svg", role: "DB", dept: "백엔드", model: "sonnet", screenColor: "#fbbf24" },
-  { name: "Milla", icon: "/agents/milla.svg", role: "보안", dept: "백엔드", model: "sonnet", screenColor: "#4ade80" },
-  { name: "Jun", icon: "/agents/jun.svg", role: "성능", dept: "백엔드", model: "sonnet", screenColor: "#f97316" },
-  { name: "Kain", icon: "/agents/kain.svg", role: "코드분석", dept: "백엔드", model: "sonnet", screenColor: "#64748b" },
-  { name: "Willji", icon: "/agents/willji.svg", role: "디자인", dept: "디자인", model: "sonnet", screenColor: "#f9a8d4" },
-  { name: "Iron", icon: "/agents/iron.svg", role: "화면", dept: "프론트", model: "sonnet", screenColor: "#d946ef" },
-  { name: "Rowan", icon: "/agents/rowan.svg", role: "모션", dept: "프론트", model: "sonnet", screenColor: "#a3e635" },
-  { name: "Derek", icon: "/agents/derek.svg", role: "모바일", dept: "모바일", model: "sonnet", screenColor: "#22d3ee" },
-  { name: "Hugg", icon: "/agents/hugg.svg", role: "AI 모델 리서치", dept: "AI", model: "sonnet", screenColor: "#fbbf24" },
-  { name: "Jo", icon: "/agents/jo.svg", role: "AI 구현", dept: "AI", model: "sonnet", screenColor: "#818cf8" },
-  { name: "Noa", icon: "/agents/noa.svg", role: "합의 검증", dept: "기획", model: "sonnet", screenColor: "#14b8a6" },
+  { name: "Ryan", icon: "/agents/ryan.svg", role: "원칙 도출", dept: "기획", model: "opus", screenColor: "#84cc16" },
+  { name: "Jay", icon: "/agents/jay.svg", role: "API", dept: "백엔드", model: "opus", screenColor: "#fb923c" },
+  { name: "Jerry", icon: "/agents/jerry.svg", role: "DB", dept: "백엔드", model: "opus", screenColor: "#fbbf24" },
+  { name: "Milla", icon: "/agents/milla.svg", role: "보안", dept: "백엔드", model: "opus", screenColor: "#4ade80" },
+  { name: "Jun", icon: "/agents/jun.svg", role: "성능", dept: "백엔드", model: "opus", screenColor: "#f97316" },
+  { name: "Kain", icon: "/agents/kain.svg", role: "코드분석", dept: "백엔드", model: "opus", screenColor: "#64748b" },
+  { name: "Willji", icon: "/agents/willji.svg", role: "디자인", dept: "디자인", model: "opus", screenColor: "#f9a8d4" },
+  { name: "Iron", icon: "/agents/iron.svg", role: "웹 프론트", dept: "프론트", model: "opus", screenColor: "#d946ef" },
+  { name: "Derek", icon: "/agents/derek.svg", role: "모션/인터랙션", dept: "프론트", model: "opus", screenColor: "#22d3ee" },
+  { name: "Rowan", icon: "/agents/rowan.svg", role: "모바일", dept: "모바일", model: "opus", screenColor: "#a3e635" },
+  { name: "Hugg", icon: "/agents/hugg.svg", role: "AI 모델 리서치", dept: "AI", model: "opus", screenColor: "#fbbf24" },
+  { name: "Jo", icon: "/agents/jo.svg", role: "AI 구현", dept: "AI", model: "opus", screenColor: "#818cf8" },
+  { name: "Noah", icon: "/agents/noa.svg", role: "합의 검증", dept: "기획", model: "opus", screenColor: "#14b8a6" },
   { name: "Critic", icon: "/agents/critic.svg", role: "심의 비평", dept: "기획", model: "opus", screenColor: "#ef4444" },
 ];
 
@@ -163,7 +163,7 @@ export default function AgentTeam() {
 
             {/* Office grid - agents at desks */}
             <div className="grid grid-cols-6 gap-x-2 gap-y-6 max-w-4xl mx-auto">
-              {/* Row 1: Sam, Simon, Able, Klay, Ryan, Noa */}
+              {/* Row 1: Sam, Simon, Able, Klay, Ryan, Noah */}
               {[team[0], team[1], team[2], team[3], team[4], team[16]].map((agent, i) => (
                 <DeskAgent key={agent.name} agent={agent} index={i} isInView={isInView} />
               ))}
